@@ -352,64 +352,229 @@ td{
 
 }
 
-@media(max-width:900px){
+/* ===========================
+       TABLET
+=========================== */
+
+@media (max-width:900px){
+
+header{
+    padding:20px;
+}
+
+nav{
+    justify-content:space-between;
+    align-items:center;
+}
+
+/* Hide menu */
 
 nav ul{
     display:none;
 }
 
+/* Hide login & get started */
+
+.nav-btns{
+    display:none;
+}
+
+/* Hero */
+
 .hero{
-    padding:30px 20px;
-}
-
-.left h1{
-    font-size:48px;
-    line-height:56px;
-}
-
-.dashboard{
     flex-direction:column;
-}
-
-.sidebar{
-    width:100%;
-    flex-direction:row;
-    justify-content:center;
-    gap:15px;
-}
-
-.bottom-icon{
-    margin:0;
-}
-
-.content{
+    align-items:flex-start;
+    text-align:left;
+    gap:40px;
     padding:20px;
 }
 
-.cards{
-    flex-direction:column;
+.left,
+.right{
+    width:100%;
 }
-
-}
-
-@media(max-width:600px){
 
 .left h1{
-    font-size:38px;
-    line-height:46px;
+    font-size:58px;
+    line-height:66px;
+    margin-bottom:20px;
 }
 
+.left p{
+    width:100%;
+    font-size:20px;
+    line-height:34px;
+    margin-bottom:35px;
+}
+
+/* Buttons remain side by side */
+
 .buttons{
-    flex-direction:column;
+    justify-content:flex-start;
+    gap:16px;
+    flex-wrap:nowrap;
 }
 
 .primary,
 .secondary{
+    width:170px;
+    height:54px;
+}
+
+/* Trustpilot */
+
+.reviews{
+    margin-top:25px;
+}
+
+.right{
+    justify-content:center;
+}
+
+.dashboard{
     width:100%;
+    max-width:720px;
+}
+
+/* Keep sidebar vertical */
+
+.sidebar{
+    width:60px;
+    flex-direction:column;
+    justify-content:flex-start;
+}
+
+.bottom-icon{
+    margin-top:auto;
+}
+
+/* Keep cards in one row */
+
+.cards{
+    flex-direction:row;
+}
+
+.content{
+    padding:18px;
 }
 
 }
 
+/* ===========================
+       MOBILE
+=========================== */
+
+@media (max-width:600px){
+
+header{
+    padding:18px;
+}
+
+.hero{
+    padding:18px;
+}
+
+.left h1{
+    font-size:38px;
+    line-height:48px;
+}
+
+.left p{
+    font-size:16px;
+    line-height:30px;
+}
+
+/* Buttons stay side by side */
+
+.buttons{
+    flex-direction:row;
+    gap:12px;
+}
+
+.primary,
+.secondary{
+    flex:1;
+    width:auto;
+    height:46px;
+    font-size:14px;
+}
+
+/* Trustpilot */
+
+.reviews{
+    margin-top:22px;
+}
+
+.trust{
+    margin-bottom:6px;
+}
+
+.stars{
+    font-size:18px;
+}
+
+.reviews p{
+    font-size:15px;
+}
+
+/* Dashboard */
+
+.dashboard{
+    width:100%;
+    border-radius:14px;
+}
+
+.sidebar{
+    width:48px;
+}
+
+.icon{
+    width:28px;
+    height:28px;
+}
+
+.bottom-icon{
+    width:30px;
+    height:30px;
+}
+
+/* Keep top cards in one row */
+
+.cards{
+    flex-direction:row;
+    gap:10px;
+}
+
+.card{
+    padding:12px;
+}
+
+.card h2{
+    font-size:22px;
+}
+
+.card p{
+    font-size:12px;
+}
+
+.graph{
+    padding:14px;
+}
+
+.bars{
+    gap:5px;
+}
+
+.bars div{
+    width:12px;
+}
+
+table{
+    font-size:12px;
+    overflow-x:auto;
+}
+
+}
 /* ================= Statistics Section ================= */
 /*==================================
         STATISTICS SECTION
