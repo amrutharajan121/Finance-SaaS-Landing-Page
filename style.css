@@ -1769,13 +1769,22 @@ table{
 
 .toggle{
 
-    flex-direction:column;
+    display:flex;
+    flex-direction:row !important;
+    justify-content:center;
+    align-items:center;
+    width:fit-content;
+    margin:0 auto;
 
 }
 
 .toggle button{
 
-    width:100%;
+    width:auto !important;
+    white-space:nowrap;
+    flex-shrink:0;
+
+}
 
 }
 
