@@ -2453,28 +2453,37 @@ table{
 /* ---------- CTA SECTION ---------- */
 
 .cta-section{
-    padding:40px 20px 32px !important;
-    min-height:auto !important;
+    /* !important guards against a conflicting .cta-section rule
+       elsewhere in the stylesheet still applying desktop padding */
+    padding:70px 20px !important;
 }
 
 .cta-content h2{
-    font-size:28px !important;
+    font-size:34px !important;
+    font-weight:700;
     line-height:1.2;
-    max-width:220px;
-    margin:0 auto 14px !important;
+    max-width:260px;
+    margin:0 auto 8px !important;
+    text-align:center;
 }
 
 .cta-content p{
-    font-size:14px !important;
-    line-height:1.5;
-    max-width:250px;
-    margin:0 auto 28px !important;
+    font-size:15px !important;
+    line-height:1.6;
+    max-width:260px;
+    margin:0 auto 22px !important;
 }
 
 .cta-btn{
-    width:155px !important;
-    height:42px !important;
-    font-size:14px !important;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    width:165px !important;
+    height:46px !important;
+    padding:0 !important;
+    border-radius:999px;
+    font-size:15px;
+    font-weight:600;
 }
 
 /* ---------- Floating Icons ---------- */
@@ -2489,47 +2498,67 @@ table{
     height:17px;
 }
 
-/* top */
+/* Reset all four offsets on every icon so nothing leaks in from
+   base or tablet rules, then position to match the reference arc:
+   Zapier + Figma sit slightly higher/inward than their row partners */
 
+/* Top row */
 .zapier{
-    top:18px !important;
-    left:50%;
+    /* top center, sits slightly higher than github/slack */
+    top:8px !important;
+    left:50% !important;
+    right:auto !important;
+    bottom:auto !important;
     transform:translateX(-50%);
 }
 
 .github{
-    top:72px !important;
-    left:22px !important;
+    /* upper left */
+    top:36px !important;
+    left:10px !important;
+    right:auto !important;
+    bottom:auto !important;
 }
 
 .slack{
-    top:72px !important;
-    right:22px !important;
+    /* upper right */
+    top:36px !important;
+    right:10px !important;
+    left:auto !important;
+    bottom:auto !important;
 }
 
-/* bottom */
+/* Bottom row */
+.jira{
+    /* bottom left */
+    bottom:12px !important;
+    left:10px !important;
+    top:auto !important;
+    right:auto !important;
+}
 
 .figma{
-    bottom:84px !important;
-    left:50%;
+    /* bottom center, sits higher than jira/notion */
+    bottom:40px !important;
+    left:50% !important;
+    right:auto !important;
+    top:auto !important;
     transform:translateX(-50%);
 }
 
-.jira{
-    bottom:34px !important;
-    left:22px !important;
-}
-
 .notion{
-    bottom:34px !important;
-    right:22px !important;
+    /* bottom right */
+    bottom:12px !important;
+    right:10px !important;
+    left:auto !important;
+    top:auto !important;
 }
 
 
 /* ---------- FOOTER ---------- */
 
 .footer{
-    padding:22px 22px 18px !important;
+    padding:18px 20px !important;
 }
 
 .footer-container{
@@ -2547,10 +2576,13 @@ table{
 }
 
 .footer-logo h2::before{
-
-    width:22px;
-    height:22px;
-    border-radius:50%;
+    content:"";
+    display:inline-block;
+    width:20px;
+    height:20px;
+    background:linear-gradient(135deg,#5564ff,#e2b8ff);
+    border-radius:5px;
+    margin-right:8px;
 }
 
 .footer-logo h2::after{
@@ -2561,20 +2593,19 @@ table{
 }
 
 .footer-links{
-
-    display:grid;
-    grid-template-columns:repeat(4,max-content);
-
-    column-gap:26px;
-    row-gap:10px;
-
-    justify-content:start;
+    flex-wrap:wrap;
+    justify-content:flex-start;
+    width:100%;
+    row-gap:8px;
+    column-gap:14px;
 }
 
 .footer-links a{
     font-size:13px;
 }
 
-
+.footer-links a:nth-child(5){
+    flex-basis:100%;
+}
 
 }
