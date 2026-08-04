@@ -2512,7 +2512,7 @@ table{
 
 .github{
     /* upper left, level with zapier's row */
-    top:8px !important;
+    top:9px !important;
     left:10px !important;
     right:auto !important;
     bottom:auto !important;
@@ -2537,7 +2537,7 @@ table{
 
 .figma{
     /* centered, sitting below the button, clear of it */
-    bottom:14px !important;
+    bottom:15px !important;
     left:50% !important;
     right:auto !important;
     top:auto !important;
