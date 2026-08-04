@@ -1241,6 +1241,13 @@ table{
 
 @media(max-width:768px){
 
+.testimonial{
+
+    background:#f7f7f8;
+    padding:70px 6%;
+
+}
+
 .testimonial-container{
 
     flex-direction:column;
@@ -1251,7 +1258,17 @@ table{
 
 .testimonial-image{
 
+    width:100%;
     margin-bottom:20px;
+
+}
+
+.testimonial-image img{
+
+    width:100% !important;
+    height:340px !important;
+    object-fit:cover;
+    border-radius:18px;
 
 }
 
@@ -1293,8 +1310,6 @@ table{
 .testimonial-content p:last-child{
 
     margin-bottom:0;
-
-}
 
 }
 
