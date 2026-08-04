@@ -563,10 +563,6 @@ table{
        MOBILE
 =========================== */
 
-/* ===========================
-       MOBILE
-=========================== */
-
 @media (max-width:600px){
 
 header{
@@ -674,6 +670,40 @@ table{
     body{
         overflow-x:hidden;
     }
+}
+
+/* ===========================
+   TRUSTPILOT — MOBILE FIX
+   (768px and below)
+=========================== */
+
+@media (max-width:768px){
+
+    .reviews{
+        display:flex !important;
+        flex-direction:column !important;
+        align-items:flex-start !important;
+        justify-content:flex-start !important;
+        text-align:left !important;
+        gap:6px;
+        margin-top:15px;
+    }
+
+    .trust{
+        margin-bottom:0;
+        text-align:left;
+    }
+
+    .stars{
+        margin-bottom:0;
+        text-align:left;
+    }
+
+    .reviews p{
+        margin:0;
+        text-align:left;
+    }
+
 }
 
 /* ================= Statistics Section ================= */
