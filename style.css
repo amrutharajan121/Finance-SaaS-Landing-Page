@@ -587,117 +587,146 @@ table{
        MOBILE
 =========================== */
 
+/* ===========================
+       MOBILE
+=========================== */
+
 @media (max-width:600px){
 
 header{
     padding:16px 18px;
 }
 
+nav ul,
+.nav-btns{
+    display:none;
+}
+
+.hamburger{
+    display:flex;
+}
+
 .hero{
+    flex-direction:column;
+    align-items:flex-start;
+    text-align:left;
     padding:18px;
-    gap:10px;
+    gap:28px;
+}
+
+.left,
+.right{
+    width:100%;
 }
 
 .left h1{
     font-size:34px;
     line-height:42px;
-    margin-bottom:14px;
+    margin-bottom:16px;
 }
 
 .left p{
+    width:100%;
     font-size:15px;
-    line-height:24px;
+    line-height:26px;
     margin-bottom:22px;
 }
 
-/* Buttons stay side by side, tighter like Figma */
-
 .buttons{
+    display:flex;
     flex-direction:row;
-    gap:10px;
-    margin-bottom:18px;
+    gap:12px;
+    width:100%;
+    margin-bottom:20px;
 }
 
 .primary,
 .secondary{
     flex:1;
+    height:46px;
     width:auto;
-    height:44px;
     font-size:14px;
 }
 
-/* Trustpilot — compact single-style row like Figma */
+/* Trustpilot */
 
 .reviews{
-    margin-top:0;
     display:flex;
     flex-direction:column;
     align-items:flex-start;
-    justify-content:flex-start;
     gap:6px;
-    width:fit-content;
-    max-width:100%;
-    text-align:left;
-    margin-left:0;
-    margin-right:auto;
-}
-
-.trust,
-.stars,
-.reviews p{
-    text-align:left;
-    margin-left:0;
-    width:100%;
+    margin-bottom:10px;
 }
 
 .trust{
-    margin-bottom:0;
-    font-size:14px;
+    font-size:15px;
     font-weight:600;
 }
 
 .stars{
     font-size:16px;
-    color:#00b67a;
     letter-spacing:2px;
 }
 
 .reviews p{
-    font-size:13px;
-    color:#666;
-    font-weight:600;
-    margin:0;
+    font-size:14px;
 }
 
-/* Hide the desktop/tablet dashboard entirely on mobile */
-
-/* Keep original dashboard */
+/* Dashboard */
 
 .right{
-    justify-content:center;
-    align-items:flex-start;
+    width:100%;
+    overflow-x:auto;
+    justify-content:flex-start;
+    padding-bottom:10px;
 }
 
 .dashboard{
-    width:100%;
-    min-width:unset;
-    max-width:100%;
-    transform:scale(.38);
-    transform-origin:top center;
-    margin-top:-170px;
-    margin-bottom:-180px;
+    display:flex;
+    width:720px;          /* keep desktop width */
+    min-width:720px;
+    transform:none;       /* IMPORTANT: remove scaling */
+    margin:0;
+    border-radius:16px;
 }
 
+.sidebar{
+    width:60px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
 
+.content{
+    flex:1;
+    padding:20px;
+}
 
-/* Background circles — removed on mobile, not part of the Figma design */
+.cards{
+    display:flex;
+    flex-direction:row;
+    gap:16px;
+}
+
+.card{
+    flex:1;
+    min-width:auto;
+}
+
+.graph{
+    margin-bottom:22px;
+}
+
+table{
+    width:100%;
+    min-width:100%;
+}
 
 .bg-circle{
     display:none;
 }
 
 }
-
 
 /* ================= Statistics Section ================= */
 /*==================================
