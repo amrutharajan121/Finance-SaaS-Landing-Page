@@ -2453,8 +2453,6 @@ table{
 /* ---------- CTA SECTION ---------- */
 
 .cta-section{
-    /* !important guards against a conflicting .cta-section rule
-       elsewhere in the stylesheet still applying desktop padding */
     padding:70px 20px !important;
 }
 
@@ -2471,7 +2469,7 @@ table{
     font-size:15px !important;
     line-height:1.6;
     max-width:260px;
-    margin:0 auto 22px !important;
+    margin:0 auto 20px !important;
 }
 
 .cta-btn{
@@ -2489,6 +2487,7 @@ table{
 /* ---------- Floating Icons ---------- */
 
 .floating-icon{
+    /* Identical size for all 6 circular backgrounds */
     width:38px !important;
     height:38px !important;
 }
@@ -2498,13 +2497,12 @@ table{
     height:17px;
 }
 
-/* Reset all four offsets on every icon so nothing leaks in from
-   base or tablet rules, then position to match the reference arc:
-   Zapier + Figma sit slightly higher/inward than their row partners */
+/* Reset all four offsets per icon so nothing leaks in from
+   base or tablet rules */
 
 /* Top row */
 .zapier{
-    /* top center, sits slightly higher than github/slack */
+    /* centered at the very top */
     top:8px !important;
     left:50% !important;
     right:auto !important;
@@ -2513,16 +2511,16 @@ table{
 }
 
 .github{
-    /* upper left */
-    top:36px !important;
+    /* upper left, level with zapier's row */
+    top:8px !important;
     left:10px !important;
     right:auto !important;
     bottom:auto !important;
 }
 
 .slack{
-    /* upper right */
-    top:36px !important;
+    /* upper right, level with zapier's row */
+    top:8px !important;
     right:10px !important;
     left:auto !important;
     bottom:auto !important;
@@ -2538,8 +2536,8 @@ table{
 }
 
 .figma{
-    /* bottom center, sits higher than jira/notion */
-    bottom:40px !important;
+    /* centered, sitting below the button, clear of it */
+    bottom:12px !important;
     left:50% !important;
     right:auto !important;
     top:auto !important;
@@ -2593,19 +2591,20 @@ table{
 }
 
 .footer-links{
+    display:flex;
     flex-wrap:wrap;
     justify-content:flex-start;
-    width:100%;
-    row-gap:8px;
+    /* Constrained width (not 100%) so exactly 4 short links fit
+       per row and the remaining 3 wrap together onto row 2 —
+       replaces the broken nth-child(5) forced-break approach */
+    width:auto;
+    max-width:270px;
+    row-gap:10px;
     column-gap:14px;
 }
 
 .footer-links a{
     font-size:13px;
-}
-
-.footer-links a:nth-child(5){
-    flex-basis:100%;
 }
 
 }
