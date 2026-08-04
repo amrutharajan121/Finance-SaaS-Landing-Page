@@ -2453,35 +2453,34 @@ table{
 /* ---------- CTA SECTION ---------- */
 
 .cta-section{
-    /* Reduced height: 70px top/bottom exactly as specified */
-    padding:70px 20px;
+    /* !important guards against a conflicting .cta-section rule
+       elsewhere in the stylesheet still applying desktop padding */
+    padding:70px 20px !important;
 }
 
 .cta-content h2{
-    font-size:34px;
+    font-size:34px !important;
     font-weight:700;
     line-height:1.2;
     max-width:260px;
-    margin:0 auto;
+    margin:0 auto 8px !important;
     text-align:center;
 }
 
 .cta-content p{
-    font-size:15px;
+    font-size:15px !important;
     line-height:1.6;
     max-width:260px;
-    margin:18px auto 28px;
+    margin:0 auto 22px !important;
 }
 
 .cta-btn{
-    /* Fixed size instead of padding-based, guarantees exact dimensions
-       regardless of button text length */
     display:inline-flex;
     align-items:center;
     justify-content:center;
-    width:165px;
-    height:46px;
-    padding:0;
+    width:165px !important;
+    height:46px !important;
+    padding:0 !important;
     border-radius:999px;
     font-size:15px;
     font-weight:600;
@@ -2490,8 +2489,8 @@ table{
 /* ---------- Floating Icons ---------- */
 
 .floating-icon{
-    width:38px;
-    height:38px;
+    width:38px !important;
+    height:38px !important;
 }
 
 .floating-icon img{
@@ -2499,83 +2498,79 @@ table{
     height:17px;
 }
 
-/* Reset all four offsets on every icon so mobile positioning is
-   fully self-contained — no leftover top/left/right/bottom values
-   inherited from base or tablet rules */
+/* Reset all four offsets on every icon so nothing leaks in from
+   base or tablet rules, then position to match the reference arc:
+   Zapier + Figma sit slightly higher/inward than their row partners */
 
 /* Top row */
 .zapier{
-    /* top center */
-    top:12px;
-    left:50%;
-    right:auto;
-    bottom:auto;
+    /* top center, sits slightly higher than github/slack */
+    top:8px !important;
+    left:50% !important;
+    right:auto !important;
+    bottom:auto !important;
     transform:translateX(-50%);
 }
 
 .github{
     /* upper left */
-    top:12px;
-    left:10px;
-    right:auto;
-    bottom:auto;
+    top:36px !important;
+    left:10px !important;
+    right:auto !important;
+    bottom:auto !important;
 }
 
 .slack{
     /* upper right */
-    top:12px;
-    right:10px;
-    left:auto;
-    bottom:auto;
+    top:36px !important;
+    right:10px !important;
+    left:auto !important;
+    bottom:auto !important;
 }
 
 /* Bottom row */
 .jira{
     /* bottom left */
-    bottom:12px;
-    left:10px;
-    top:auto;
-    right:auto;
+    bottom:12px !important;
+    left:10px !important;
+    top:auto !important;
+    right:auto !important;
 }
 
 .figma{
-    /* bottom center */
-    bottom:8px;
-    left:50%;
-    right:auto;
-    top:auto;
+    /* bottom center, sits higher than jira/notion */
+    bottom:62px !important;
+    left:50% !important;
+    right:auto !important;
+    top:auto !important;
     transform:translateX(-50%);
 }
 
 .notion{
     /* bottom right */
-    bottom:12px;
-    right:10px;
-    left:auto;
-    top:auto;
+    bottom:12px !important;
+    right:10px !important;
+    left:auto !important;
+    top:auto !important;
 }
 
 
 /* ---------- FOOTER ---------- */
 
 .footer{
-    /* Much shorter footer: reduced top/bottom padding */
-    padding:18px 20px;
+    padding:18px 20px !important;
 }
 
 .footer-container{
     flex-direction:column;
     align-items:flex-start;
-    /* Reduced gap between logo and links */
     gap:12px;
 }
 
-/* Swap "MADE IN FIGMA" for ICON + LOGO on mobile only,
-   without touching the HTML */
 .footer-logo h2{
     display:flex;
     align-items:center;
-    font-size:0;         /* hides original "MADE IN FIGMA" text node */
+    font-size:0;
     font-weight:700;
     line-height:1;
 }
@@ -2585,7 +2580,7 @@ table{
     display:inline-block;
     width:20px;
     height:20px;
-    background:linear-gradient(90deg,#5564ff,#e2b8ff);
+    background:linear-gradient(135deg,#5564ff,#e2b8ff);
     border-radius:5px;
     margin-right:8px;
 }
@@ -2601,7 +2596,6 @@ table{
     flex-wrap:wrap;
     justify-content:flex-start;
     width:100%;
-    /* Reduced gap between rows and between links */
     row-gap:8px;
     column-gap:14px;
 }
@@ -2610,8 +2604,6 @@ table{
     font-size:13px;
 }
 
-/* Forces a guaranteed break before Link 5, giving an exact
-   4-then-3 two-row layout regardless of link text length */
 .footer-links a:nth-child(5){
     flex-basis:100%;
 }
