@@ -2450,45 +2450,151 @@ table{
 
 @media(max-width:480px){
 
+/* ---------- CTA SECTION ---------- */
+
+.cta-section{
+    /* Reduced overall section height (was 120px, then 90px on tablet) */
+    padding:75px 20px;
+}
+
 .cta-content h2{
+    /* Heading sized 32-38px range, forced to 2 lines via max-width */
     font-size:34px;
-    line-height:1.2;
+    line-height:1.25;
+    max-width:280px;
+    margin:0 auto 14px;
 }
 
 .cta-content p{
     font-size:15px;
+    /* Reduced spacing before button */
+    margin-bottom:26px;
 }
 
 .cta-btn{
-    padding:16px 34px;
+    /* Explicit width/height instead of padding-driven sizing,
+       so the button matches the 160-180px x 46-50px spec exactly */
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    width:170px;
+    height:48px;
+    padding:0;
+    font-size:14px;
+    border-radius:999px;
+    margin:0 auto;
 }
 
+/* ---------- Floating Icons ---------- */
+
 .floating-icon{
-    width:40px;
-    height:40px;
+    /* Equal, smaller size for mobile */
+    width:38px;
+    height:38px;
 }
 
 .floating-icon img{
     width:18px;
+    height:18px;
 }
 
-/* Hide extra icons */
-
+/* Show all 6 icons again (base/mobile previously hid slack + jira) */
 .slack,
 .jira{
-    display:none;
+    display:block;
+}
+
+/* Reset right/left/bottom/top so each icon gets a clean mobile position
+   instead of inheriting leftover tablet/desktop offsets */
+
+/* Top row */
+.zapier{
+    /* top center */
+    top:14px;
+    left:50%;
+    right:auto;
+    bottom:auto;
+    transform:translateX(-50%);
+}
+
+.github{
+    /* left middle */
+    top:50%;
+    left:8px;
+    right:auto;
+    bottom:auto;
+    transform:translateY(-50%);
+}
+
+.slack{
+    /* upper right */
+    top:22px;
+    right:10px;
+    left:auto;
+    bottom:auto;
+}
+
+/* Bottom row */
+.jira{
+    /* bottom left */
+    bottom:16px;
+    left:12px;
+    top:auto;
+    right:auto;
+}
+
+.figma{
+    /* bottom center */
+    bottom:8px;
+    left:50%;
+    right:auto;
+    top:auto;
+    transform:translateX(-50%);
+}
+
+.notion{
+    /* bottom right */
+    bottom:16px;
+    right:12px;
+    left:auto;
+    top:auto;
+}
+
+
+/* ---------- FOOTER ---------- */
+
+.footer{
+    /* Much smaller footer height via reduced padding */
+    padding:24px 20px;
+}
+
+.footer-container{
+    flex-direction:column;
+    /* Overrides base align-items:center so column-direction
+       children (logo, links) hug the left edge instead of centering */
+    align-items:flex-start;
+    gap:16px;
 }
 
 .footer-logo h2{
-    font-size:24px;
+    /* Smaller logo for mobile, left aligned via parent align-items */
+    font-size:22px;
 }
 
 .footer-links{
-    gap:14px;
+    /* Left-aligned, wraps into rows naturally based on available width.
+       With typical short nav-link text this produces ~4 links on row 1
+       and ~3 on row 2 at 375px; adjust gap/font-size slightly if your
+       actual link labels are longer and break differently. */
+    flex-wrap:wrap;
+    justify-content:flex-start;
+    width:100%;
+    row-gap:10px;
+    column-gap:16px;
 }
 
 .footer-links a{
-    font-size:14px;
+    font-size:13px;
 }
 
 }
