@@ -863,13 +863,9 @@ table{
 }
 /* ================= HOW IT WORKS ================= */
 
-/* ==========================
+/* ===========================
         HOW IT WORKS
-========================== */
-
-/* ==========================
-        HOW IT WORKS
-========================== */
+=========================== */
 
 .how-it-works{
     padding:100px 8%;
@@ -878,7 +874,7 @@ table{
 
 .section-title{
     text-align:center;
-    margin-bottom:90px;
+    margin-bottom:80px;
 }
 
 .section-title h2{
@@ -890,16 +886,18 @@ table{
 }
 
 .section-title p{
-    color:#304579;
     font-size:18px;
     line-height:30px;
+    color:#304579;
 }
+
+/* Desktop */
 
 .steps{
     display:flex;
     justify-content:center;
     align-items:flex-start;
-    gap:25px;
+    gap:30px;
 }
 
 .step-item{
@@ -928,9 +926,9 @@ table{
 }
 
 .line{
-    width:200px;
-    border-top:2px dashed #b8c2d8;
-    margin-top:-35px;
+    width:180px;
+    border-top:2px dashed #cfd6e5;
+    margin-top:-40px;
 }
 
 .step h3{
@@ -942,48 +940,52 @@ table{
 .step p{
     font-size:17px;
     line-height:30px;
-    color:#132551;
+    color:#304579;
 }
 
-/* ================= MOBILE ================= */
 
-@media(max-width:768px){
+/* ===========================
+        MOBILE
+=========================== */
+
+@media (max-width:768px){
 
 .how-it-works{
-    padding:60px 20px;
+    padding:70px 20px;
 }
 
 .section-title{
-    margin-bottom:35px;
+    margin-bottom:40px;
 }
 
 .section-title h2{
-    font-size:22px;
+    font-size:24px;
     font-weight:700;
     letter-spacing:0;
 }
 
 .section-title p{
-    font-size:13px;
-    line-height:20px;
-    max-width:220px;
-    margin:auto;
+    font-size:14px;
+    line-height:22px;
 }
 
 .steps{
-    display:block;
+    display:flex;
+    flex-direction:column;
+    gap:0;
 }
 
 .step-item{
-    display:block;
+    position:relative;
+    padding-bottom:32px;
 }
 
 .step{
+    width:100%;
     display:flex;
     align-items:flex-start;
-    gap:12px;
-    width:100%;
     text-align:left;
+    gap:14px;
 }
 
 .step-content{
@@ -991,31 +993,39 @@ table{
 }
 
 .circle{
-    width:32px;
-    height:32px;
-    min-width:32px;
+    width:36px;
+    height:36px;
+    min-width:36px;
     margin:0;
-    font-size:16px;
+    font-size:18px;
+    border:1px solid #d7dcea;
 }
 
 .line{
+    position:absolute;
+    left:17px;
+    top:36px;
     width:2px;
     height:42px;
     border:none;
-    border-left:2px dashed #cfd3df;
-    margin:6px 0 10px 15px;
+    border-left:2px dashed #cfd6e5;
+    margin:0;
+}
+
+.step-item:last-child .line{
+    display:none;
 }
 
 .step h3{
-    font-size:14px;
-    font-weight:700;
-    margin-bottom:4px;
+    font-size:16px;
+    font-weight:600;
+    margin-bottom:6px;
 }
 
 .step p{
-    font-size:12px;
-    line-height:18px;
-    color:#42526b;
+    font-size:13px;
+    line-height:20px;
+    color:#304579;
 }
 
 }
