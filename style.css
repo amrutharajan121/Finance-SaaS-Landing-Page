@@ -1450,34 +1450,35 @@ table{
         TOGGLE
 =============================*/
 
+/* Toggle */
+
 .toggle{
     display:flex;
     align-items:center;
     justify-content:center;
-    width:230px;
-    height:50px;
+    width:320px;              /* Increased width */
     margin:0 auto;
     background:#f2f2f2;
     border-radius:10px;
-    padding:4px;
+    padding:6px;
+    gap:0;
 }
 
 .toggle button{
     flex:1;
-    height:42px;
+    height:48px;
     border:none;
     background:transparent;
     border-radius:8px;
     cursor:pointer;
     font-size:16px;
     font-weight:600;
-    color:#666;
-    transition:.3s;
     white-space:nowrap;
+    transition:.3s;
 }
 
-.toggle .active-btn{
-    background:#111;
+.active-btn{
+    background:#111 !important;
     color:#fff;
 }
 
@@ -1637,24 +1638,7 @@ table{
         Responsive
 =============================*/
 
-@media(max-width:1100px){
-
-    .pricing-cards{
-        flex-direction:column;
-        align-items:center;
-    }
-
-    .featured{
-        transform:none;
-    }
-
-    .featured:hover{
-        transform:translateY(-10px);
-    }
-
-}
-
-@media(max-width:768px){
+@media (max-width:768px){
 
     .pricing-header h2{
         font-size:42px;
@@ -1665,20 +1649,18 @@ table{
         max-width:380px;
     }
 
-    /* KEEP TOGGLE HORIZONTAL */
-
     .toggle{
-        width:230px;
-        height:50px;
-        margin:0 auto;
+        width:320px;
+        max-width:100%;
         display:flex;
         flex-direction:row;
+        margin:0 auto;
     }
 
     .toggle button{
         flex:1;
         width:50%;
-        font-size:15px;
+        font-size:16px;
     }
 
 }
