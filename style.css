@@ -356,6 +356,12 @@ nav{
     font-weight:600;
 }
 
+/* Heading weight adjustment (all breakpoints) */
+
+.left h1{
+    font-weight:700;
+}
+
 /* Mobile-only dashboard hidden by default (desktop/tablet use .dashboard) */
 
 .mobile-dashboard{
@@ -590,6 +596,7 @@ header{
 .reviews p{
     font-size:13px;
     color:#666;
+    font-weight:600;
     margin:0;
 }
 
@@ -795,8 +802,24 @@ table{
     font-size:12px;
     overflow-x:auto;
 }
+.one{
+    width:500px;
+    height:500px;
+    top:-220px;
+    right:-160px;
+    box-shadow:0 0 60px rgba(0,0,0,.08);
+}
+
+.two{
+    width:500px;
+    height:500px;
+    bottom:-260px;
+    left:-160px;
+    box-shadow:0 0 60px rgba(0,0,0,.05);
+}
 
 }
+
 
 /* ================= Statistics Section ================= */
 /*==================================
