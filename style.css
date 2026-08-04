@@ -2503,7 +2503,7 @@ table{
 /* Top row */
 .zapier{
     /* centered at the very top */
-    top:8px !important;
+    top:11px !important;
     left:50% !important;
     right:auto !important;
     bottom:auto !important;
@@ -2537,7 +2537,7 @@ table{
 
 .figma{
     /* centered, sitting below the button, clear of it */
-    bottom:12px !important;
+    bottom:14px !important;
     left:50% !important;
     right:auto !important;
     top:auto !important;
