@@ -2503,7 +2503,7 @@ table{
 /* Top row */
 .zapier{
     /* centered at the very top */
-    top:11px !important;
+    top:8px !important;
     left:50% !important;
     right:auto !important;
     bottom:auto !important;
@@ -2512,7 +2512,7 @@ table{
 
 .github{
     /* upper left, level with zapier's row */
-    top:9px !important;
+    top:12px !important;
     left:10px !important;
     right:auto !important;
     bottom:auto !important;
@@ -2520,7 +2520,7 @@ table{
 
 .slack{
     /* upper right, level with zapier's row */
-    top:8px !important;
+    top:12px !important;
     right:10px !important;
     left:auto !important;
     bottom:auto !important;
