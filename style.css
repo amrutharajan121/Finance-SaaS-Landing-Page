@@ -7,7 +7,6 @@
 
 body{
     background:#f8f8f8;
-    overflow-x:hidden;
     position:relative;
 }
 
@@ -594,7 +593,7 @@ table{
 @media (max-width:600px){
 
 header{
-    padding:16px 18px;
+    padding:18px;
 }
 
 nav ul,
@@ -607,11 +606,11 @@ nav ul,
 }
 
 .hero{
+    display:flex;
     flex-direction:column;
     align-items:flex-start;
-    text-align:left;
+    gap:25px;
     padding:18px;
-    gap:28px;
 }
 
 .left,
@@ -622,83 +621,52 @@ nav ul,
 .left h1{
     font-size:34px;
     line-height:42px;
-    margin-bottom:16px;
 }
 
 .left p{
     width:100%;
-    font-size:15px;
-    line-height:26px;
-    margin-bottom:22px;
+    font-size:16px;
+    line-height:28px;
 }
 
 .buttons{
     display:flex;
-    flex-direction:row;
     gap:12px;
-    width:100%;
-    margin-bottom:20px;
 }
 
 .primary,
 .secondary{
     flex:1;
     height:46px;
-    width:auto;
-    font-size:14px;
 }
-
-/* Trustpilot */
 
 .reviews{
-    display:flex;
-    flex-direction:column;
-    align-items:flex-start;
-    gap:6px;
-    margin-bottom:10px;
-}
-
-.trust{
-    font-size:15px;
-    font-weight:600;
-}
-
-.stars{
-    font-size:16px;
-    letter-spacing:2px;
-}
-
-.reviews p{
-    font-size:14px;
+    margin-top:8px;
 }
 
 /* Dashboard */
 
 .right{
-    width:100%;
-    overflow-x:auto;
+    display:flex;
     justify-content:flex-start;
+    overflow-x:auto;
     padding-bottom:10px;
+    -webkit-overflow-scrolling:touch;
 }
 
 .dashboard{
     display:flex;
-    width:720px;          /* keep desktop width */
-    min-width:720px;
-    transform:none;       /* IMPORTANT: remove scaling */
-    margin:0;
+    width:720px;
+    flex-shrink:0;
     border-radius:16px;
+    transform:none;
 }
 
 .sidebar{
     width:60px;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
 }
 
 .content{
-    flex:1;
     padding:20px;
 }
 
@@ -710,22 +678,25 @@ nav ul,
 
 .card{
     flex:1;
-    min-width:auto;
 }
 
 .graph{
-    margin-bottom:22px;
+    overflow:hidden;
 }
 
 table{
     width:100%;
-    min-width:100%;
 }
 
 .bg-circle{
     display:none;
 }
 
+}
+@media (min-width:601px){
+    body{
+        overflow-x:hidden;
+    }
 }
 
 /* ================= Statistics Section ================= */
