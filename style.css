@@ -369,6 +369,56 @@ nav{
 }
 
 /* ===========================
+   HAMBURGER (hidden by default,
+   shown at tablet/mobile)
+=========================== */
+
+.hamburger{
+    display:none;
+    flex-direction:column;
+    justify-content:space-between;
+    width:26px;
+    height:18px;
+    background:none;
+    border:none;
+    cursor:pointer;
+    padding:0;
+    margin-left:auto;
+    flex-shrink:0;
+}
+
+nav{
+    display:flex;
+    align-items:center;
+}
+
+.hamburger span{
+    display:block;
+    width:100%;
+    height:2px;
+    background:#111;
+    border-radius:2px;
+}
+
+/* Semi-bold paragraph under heading (all breakpoints) */
+
+.left p{
+    font-weight:600;
+}
+
+/* Heading weight adjustment (all breakpoints) */
+
+.left h1{
+    font-weight:600;
+}
+
+/* Mobile-only dashboard hidden by default (desktop/tablet use .dashboard) */
+
+.mobile-dashboard{
+    display:none;
+}
+
+/* ===========================
        RESPONSIVE
 =========================== */
 
@@ -802,20 +852,11 @@ table{
     font-size:12px;
     overflow-x:auto;
 }
-.one{
-    width:500px;
-    height:500px;
-    top:-220px;
-    right:-160px;
-    box-shadow:0 0 60px rgba(0,0,0,.08);
-}
 
-.two{
-    width:500px;
-    height:500px;
-    bottom:-260px;
-    left:-160px;
-    box-shadow:0 0 60px rgba(0,0,0,.05);
+/* Background circles — removed on mobile, not part of the Figma design */
+
+.bg-circle{
+    display:none;
 }
 
 }
