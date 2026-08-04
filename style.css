@@ -1452,33 +1452,39 @@ table{
 
 /* Toggle */
 
+/*============================
+        TOGGLE
+=============================*/
+
 .toggle{
-    display:flex;
+    display:inline-flex;
     align-items:center;
     justify-content:center;
-    width:320px;              /* Increased width */
-    margin:0 auto;
-    background:#f2f2f2;
+    background:#f3f3f3;
     border-radius:10px;
-    padding:6px;
+    padding:5px;
+    margin:0 auto;
     gap:0;
 }
 
 .toggle button{
-    flex:1;
-    height:48px;
     border:none;
     background:transparent;
+    padding:12px 22px;
     border-radius:8px;
-    cursor:pointer;
     font-size:16px;
     font-weight:600;
+    cursor:pointer;
     white-space:nowrap;
-    transition:.3s;
+
+    /* IMPORTANT */
+    flex:none;
+    width:auto;
+    height:auto;
 }
 
-.active-btn{
-    background:#111 !important;
+.toggle .active-btn{
+    background:#111;
     color:#fff;
 }
 
@@ -1640,27 +1646,20 @@ table{
 
 @media (max-width:768px){
 
-    .pricing-header h2{
-        font-size:42px;
-    }
-
-    .price-card{
-        width:100%;
-        max-width:380px;
-    }
-
     .toggle{
-        width:320px;
-        max-width:100%;
-        display:flex;
+        display:inline-flex;
         flex-direction:row;
-        margin:0 auto;
+        align-items:center;
+        justify-content:center;
+        width:auto;
+        max-width:100%;
     }
 
     .toggle button{
-        flex:1;
-        width:50%;
-        font-size:16px;
+        flex:none;
+        width:auto;
+        padding:12px 18px;
+        font-size:15px;
     }
 
 }
@@ -2441,13 +2440,7 @@ table{
     font-size:42px;
 }
 
-.toggle{
-    flex-direction:column;
-}
 
-.toggle button{
-    width:100%;
-}
 
 .price-card{
     width:100%;
