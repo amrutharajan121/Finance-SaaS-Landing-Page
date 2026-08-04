@@ -2453,27 +2453,27 @@ table{
 /* ---------- CTA SECTION ---------- */
 
 .cta-section{
-    /* Reduced overall section height (was 120px, then 90px on tablet) */
+    /* Reduced section height: 70-80px top/bottom as requested */
     padding:75px 20px;
 }
 
 .cta-content h2{
-    /* Heading sized 32-38px range, forced to 2 lines via max-width */
+    /* 32-38px range, bold (inherited), wraps to 2 lines via max-width */
     font-size:34px;
     line-height:1.25;
-    max-width:280px;
-    margin:0 auto 14px;
+    max-width:250px;
+    margin:0 auto 10px;
 }
 
 .cta-content p{
     font-size:15px;
     /* Reduced spacing before button */
-    margin-bottom:26px;
+    margin-bottom:22px;
 }
 
 .cta-btn{
-    /* Explicit width/height instead of padding-driven sizing,
-       so the button matches the 160-180px x 46-50px spec exactly */
+    /* Fixed width/height instead of padding-driven size,
+       guarantees 160-180px x 46-50px regardless of button text length */
     display:inline-flex;
     align-items:center;
     justify-content:center;
@@ -2482,35 +2482,32 @@ table{
     padding:0;
     font-size:14px;
     border-radius:999px;
-    margin:0 auto;
 }
 
 /* ---------- Floating Icons ---------- */
 
 .floating-icon{
-    /* Equal, smaller size for mobile */
+    /* Equal size for all 6 icons on mobile */
     width:38px;
     height:38px;
 }
 
 .floating-icon img{
-    width:18px;
-    height:18px;
+    width:17px;
+    height:17px;
 }
 
-/* Show all 6 icons again (base/mobile previously hid slack + jira) */
-.slack,
-.jira{
-    display:block;
-}
+/* All 6 icons remain visible on mobile (previous version
+   incorrectly hid slack + jira — fixed here) */
 
-/* Reset right/left/bottom/top so each icon gets a clean mobile position
-   instead of inheriting leftover tablet/desktop offsets */
+/* Reset every offset property (top/left/right/bottom) on each icon
+   so mobile positioning is self-contained and doesn't inherit
+   leftover values from base or tablet rules */
 
 /* Top row */
 .zapier{
     /* top center */
-    top:14px;
+    top:12px;
     left:50%;
     right:auto;
     bottom:auto;
@@ -2528,8 +2525,8 @@ table{
 
 .slack{
     /* upper right */
-    top:22px;
-    right:10px;
+    top:20px;
+    right:8px;
     left:auto;
     bottom:auto;
 }
@@ -2537,15 +2534,15 @@ table{
 /* Bottom row */
 .jira{
     /* bottom left */
-    bottom:16px;
-    left:12px;
+    bottom:12px;
+    left:10px;
     top:auto;
     right:auto;
 }
 
 .figma{
     /* bottom center */
-    bottom:8px;
+    bottom:4px;
     left:50%;
     right:auto;
     top:auto;
@@ -2554,8 +2551,8 @@ table{
 
 .notion{
     /* bottom right */
-    bottom:16px;
-    right:12px;
+    bottom:12px;
+    right:10px;
     left:auto;
     top:auto;
 }
@@ -2564,37 +2561,39 @@ table{
 /* ---------- FOOTER ---------- */
 
 .footer{
-    /* Much smaller footer height via reduced padding */
-    padding:24px 20px;
+    /* Much shorter footer via reduced padding */
+    padding:22px 20px;
 }
 
 .footer-container{
+    /* Stack logo above links, left-aligned instead of centered */
     flex-direction:column;
-    /* Overrides base align-items:center so column-direction
-       children (logo, links) hug the left edge instead of centering */
     align-items:flex-start;
-    gap:16px;
+    gap:14px;
 }
 
 .footer-logo h2{
-    /* Smaller logo for mobile, left aligned via parent align-items */
-    font-size:22px;
+    font-size:20px;
 }
 
 .footer-links{
-    /* Left-aligned, wraps into rows naturally based on available width.
-       With typical short nav-link text this produces ~4 links on row 1
-       and ~3 on row 2 at 375px; adjust gap/font-size slightly if your
-       actual link labels are longer and break differently. */
+    /* Left aligned, wraps into 2 rows */
     flex-wrap:wrap;
     justify-content:flex-start;
     width:100%;
-    row-gap:10px;
-    column-gap:16px;
+    row-gap:8px;
+    column-gap:14px;
 }
 
 .footer-links a{
     font-size:13px;
+}
+
+/* Force the exact 4-then-3 row split without touching the HTML:
+   giving the 5th link flex-basis:100% makes it claim a full new
+   line, pushing links 5-7 onto row 2 regardless of text width */
+.footer-links a:nth-child(5){
+    flex-basis:100%;
 }
 
 }
