@@ -1241,13 +1241,6 @@ table{
 
 @media(max-width:768px){
 
-.testimonial{
-
-    background:#f7f7f8;
-    padding:70px 6%;
-
-}
-
 .testimonial-container{
 
     flex-direction:column;
@@ -1258,17 +1251,7 @@ table{
 
 .testimonial-image{
 
-    width:100%;
     margin-bottom:20px;
-
-}
-
-.testimonial-image img{
-
-    width:100% !important;
-    height:340px !important;
-    object-fit:cover;
-    border-radius:18px;
 
 }
 
@@ -1310,6 +1293,8 @@ table{
 .testimonial-content p:last-child{
 
     margin-bottom:0;
+
+}
 
 }
 
@@ -1769,22 +1754,13 @@ table{
 
 .toggle{
 
-    display:flex;
-    flex-direction:row !important;
-    justify-content:center;
-    align-items:center;
-    width:fit-content;
-    margin:0 auto;
+    flex-direction:column;
 
 }
 
 .toggle button{
 
-    width:auto !important;
-    white-space:nowrap;
-    flex-shrink:0;
-
-}
+    width:100%;
 
 }
 
@@ -2001,7 +1977,66 @@ table{
     line-height:28px;
 
 }
+/*=================================
+   DESIGN SECTION — MOBILE FIX
+   (768px and below)
+==================================*/
 
+@media(max-width:768px){
+
+.design-section{
+    padding:60px 16px;
+}
+
+.blue-bar{
+    display:none !important;
+}
+
+.design-content{
+    width:100% !important;
+    flex-direction:column;
+    align-items:flex-start;
+    padding-left:0;
+    padding-right:0;
+}
+
+.text-content{
+    width:100% !important;
+    max-width:none !important;
+}
+
+.text-content h2{
+    text-align:left;
+    font-weight:700;
+    font-size:42px;
+    line-height:1.1;
+    margin-bottom:30px;
+}
+
+.feature h3{
+    text-align:left;
+    font-weight:700;
+    font-size:19px;
+    margin-bottom:8px;
+}
+
+.feature p{
+    text-align:left;
+    width:100% !important;
+    max-width:none !important;
+    font-size:16px;
+    line-height:1.6;
+    color:#666;
+}
+
+.design-image{
+    width:100% !important;
+    margin-left:0 !important;
+    margin-top:24px;
+    justify-content:flex-start;
+}
+
+}
 }
 
 /*===============================
