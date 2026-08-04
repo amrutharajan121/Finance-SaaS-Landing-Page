@@ -319,6 +319,37 @@ td{
 }
 
 /* ===========================
+   HAMBURGER (hidden by default,
+   shown at tablet/mobile)
+=========================== */
+
+.hamburger{
+    display:none;
+    flex-direction:column;
+    justify-content:space-between;
+    width:26px;
+    height:18px;
+    background:none;
+    border:none;
+    cursor:pointer;
+    padding:0;
+}
+
+.hamburger span{
+    display:block;
+    width:100%;
+    height:2px;
+    background:#111;
+    border-radius:2px;
+}
+
+/* Mobile-only dashboard hidden by default (desktop/tablet use .dashboard) */
+
+.mobile-dashboard{
+    display:none;
+}
+
+/* ===========================
        RESPONSIVE
 =========================== */
 
@@ -373,10 +404,14 @@ nav ul{
     display:none;
 }
 
-/* Hide login & get started */
+/* Hide login & get started, show hamburger */
 
 .nav-btns{
     display:none;
+}
+
+.hamburger{
+    display:flex;
 }
 
 /* Hero */
@@ -467,106 +502,266 @@ nav ul{
 @media (max-width:600px){
 
 header{
-    padding:18px;
+    padding:16px 18px;
 }
 
 .hero{
     padding:18px;
+    gap:28px;
 }
 
 .left h1{
-    font-size:38px;
-    line-height:48px;
+    font-size:34px;
+    line-height:42px;
+    margin-bottom:14px;
 }
 
 .left p{
-    font-size:16px;
-    line-height:30px;
+    font-size:15px;
+    line-height:24px;
+    margin-bottom:22px;
 }
 
-/* Buttons stay side by side */
+/* Buttons stay side by side, tighter like Figma */
 
 .buttons{
     flex-direction:row;
-    gap:12px;
+    gap:10px;
+    margin-bottom:18px;
 }
 
 .primary,
 .secondary{
     flex:1;
     width:auto;
-    height:46px;
+    height:44px;
     font-size:14px;
 }
 
-/* Trustpilot */
+/* Trustpilot — compact single-style row like Figma */
 
 .reviews{
-    margin-top:22px;
+    margin-top:0;
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    gap:6px;
 }
 
 .trust{
-    margin-bottom:6px;
+    margin-bottom:0;
+    font-size:14px;
+    font-weight:600;
 }
 
 .stars{
-    font-size:18px;
+    font-size:16px;
+    color:#00b67a;
+    letter-spacing:2px;
 }
 
 .reviews p{
-    font-size:15px;
+    font-size:13px;
+    color:#666;
+    margin:0;
 }
 
-/* Dashboard */
+/* Hide the desktop/tablet dashboard entirely on mobile */
 
 .dashboard{
+    display:none;
+}
+
+/* Show the Figma-matched mobile dashboard */
+
+.mobile-dashboard{
+    display:block;
     width:100%;
-    border-radius:14px;
+    background:#fff;
+    border-radius:16px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.06);
+    padding:20px;
+    margin-top:10px;
 }
 
-.sidebar{
-    width:48px;
+.mobile-dashboard h3{
+    font-size:16px;
+    font-weight:600;
+    margin:0 0 16px 0;
+    color:#111;
 }
 
-.icon{
-    width:28px;
-    height:28px;
+.mobile-cards{
+    display:flex;
+    gap:12px;
+    margin-bottom:20px;
 }
 
-.bottom-icon{
-    width:30px;
-    height:30px;
-}
-
-/* Keep top cards in one row */
-
-.cards{
-    flex-direction:row;
-    gap:10px;
-}
-
-.card{
+.mobile-card{
+    flex:1;
+    border:1px solid #ececec;
+    border-radius:10px;
     padding:12px;
 }
 
-.card h2{
-    font-size:22px;
+.mobile-card-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:6px;
 }
 
-.card p{
+.mobile-card-top p{
     font-size:12px;
+    color:#888;
+    margin:0;
 }
 
-.graph{
-    padding:14px;
+.badge{
+    font-size:10px;
+    font-weight:600;
+    padding:2px 6px;
+    border-radius:20px;
 }
 
-.bars{
-    gap:5px;
+.badge.up{
+    background:#e6f8ef;
+    color:#00b67a;
 }
 
-.bars div{
-    width:12px;
+.mobile-card h2{
+    font-size:20px;
+    font-weight:700;
+    margin:0 0 4px 0;
+    color:#111;
+}
+
+.mobile-card .compare{
+    font-size:10px;
+    color:#999;
+}
+
+/* Earnings block */
+
+.earnings{
+    border-top:1px solid #f0f0f0;
+    padding-top:14px;
+}
+
+.earnings-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:10px;
+}
+
+.earnings-head p{
+    font-size:13px;
+    font-weight:600;
+    margin:0;
+    color:#111;
+}
+
+.legend{
+    font-size:10px;
+    color:#888;
+    display:flex;
+    align-items:center;
+    gap:4px;
+}
+
+.dot{
+    display:inline-block;
+    width:6px;
+    height:6px;
+    border-radius:50%;
+    margin-right:2px;
+}
+
+.dot.achieved{
+    background:#5b6cff;
+}
+
+.dot.projected{
+    background:#c9ceff;
+    margin-left:8px;
+}
+
+.earnings-body{
+    display:flex;
+    gap:6px;
+    align-items:flex-end;
+    position:relative;
+}
+
+.earnings-scale{
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    height:110px;
+    font-size:9px;
+    color:#bbb;
+    padding-bottom:2px;
+}
+
+.heatmap{
+    flex:1;
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    height:110px;
+    position:relative;
+}
+
+.heat-col{
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+    gap:2px;
+    width:6px;
+    height:100%;
+}
+
+.heat-col div{
+    width:100%;
+    background:#c9ceff;
+    border-radius:2px;
+}
+
+.heat-col.highlight div{
+    background:#5b6cff;
+}
+
+.tooltip{
+    position:absolute;
+    top:-6px;
+    right:10px;
+    background:#111;
+    color:#fff;
+    font-size:9px;
+    padding:6px 8px;
+    border-radius:8px;
+    line-height:1.6;
+    white-space:nowrap;
+    z-index:2;
+}
+
+.tooltip .dot.achieved{
+    background:#5b6cff;
+}
+
+.tooltip .dot.projected{
+    background:#8891ff;
+    margin-left:0;
+}
+
+.earnings-dates{
+    display:flex;
+    justify-content:space-between;
+    font-size:9px;
+    color:#bbb;
+    margin-top:8px;
+    padding-left:34px;
 }
 
 table{
