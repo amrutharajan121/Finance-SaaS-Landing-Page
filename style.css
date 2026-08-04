@@ -1039,9 +1039,7 @@ table{
 /*==============================
         TESTIMONIAL
 ===============================*/
-/*==================================
-        TESTIMONIAL
-===================================*/
+
 
 .testimonial{
 
@@ -1233,6 +1231,70 @@ table{
     height:60px;
 
     font-size:22px;
+
+}
+
+/*==========================
+   TESTIMONIAL — MOBILE FIX
+   (768px and below)
+===========================*/
+
+@media(max-width:768px){
+
+.testimonial-container{
+
+    flex-direction:column;
+    align-items:flex-start !important;
+    text-align:left !important;
+
+}
+
+.testimonial-image{
+
+    margin-bottom:20px;
+
+}
+
+.testimonial-content{
+
+    width:100%;
+    text-align:left !important;
+
+}
+
+.quote{
+
+    display:block;
+    text-align:left !important;
+    margin:0 0 8px 0;
+
+}
+
+.testimonial-content h2{
+
+    text-align:left !important;
+    width:100%;
+    font-size:28px;
+    font-weight:800;
+    line-height:1.2;
+    margin:0 0 14px 0;
+
+}
+
+.testimonial-content p{
+
+    text-align:left !important;
+    width:100%;
+    line-height:1.6;
+    margin-bottom:20px;
+
+}
+
+.testimonial-content p:last-child{
+
+    margin-bottom:0;
+
+}
 
 }
 
