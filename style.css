@@ -2453,41 +2453,43 @@ table{
 /* ---------- CTA SECTION ---------- */
 
 .cta-section{
-    /* Reduced section height: 70-80px top/bottom as requested */
-    padding:75px 20px;
+    /* Reduced height: 70px top/bottom exactly as specified */
+    padding:70px 20px;
 }
 
 .cta-content h2{
-    /* 32-38px range, bold (inherited), wraps to 2 lines via max-width */
     font-size:34px;
-    line-height:1.25;
-    max-width:250px;
-    margin:0 auto 10px;
+    font-weight:700;
+    line-height:1.2;
+    max-width:260px;
+    margin:0 auto;
+    text-align:center;
 }
 
 .cta-content p{
     font-size:15px;
-    /* Reduced spacing before button */
-    margin-bottom:22px;
+    line-height:1.6;
+    max-width:260px;
+    margin:18px auto 28px;
 }
 
 .cta-btn{
-    /* Fixed width/height instead of padding-driven size,
-       guarantees 160-180px x 46-50px regardless of button text length */
+    /* Fixed size instead of padding-based, guarantees exact dimensions
+       regardless of button text length */
     display:inline-flex;
     align-items:center;
     justify-content:center;
-    width:170px;
-    height:48px;
+    width:165px;
+    height:46px;
     padding:0;
-    font-size:14px;
     border-radius:999px;
+    font-size:15px;
+    font-weight:600;
 }
 
 /* ---------- Floating Icons ---------- */
 
 .floating-icon{
-    /* Equal size for all 6 icons on mobile */
     width:38px;
     height:38px;
 }
@@ -2497,12 +2499,9 @@ table{
     height:17px;
 }
 
-/* All 6 icons remain visible on mobile (previous version
-   incorrectly hid slack + jira — fixed here) */
-
-/* Reset every offset property (top/left/right/bottom) on each icon
-   so mobile positioning is self-contained and doesn't inherit
-   leftover values from base or tablet rules */
+/* Reset all four offsets on every icon so mobile positioning is
+   fully self-contained — no leftover top/left/right/bottom values
+   inherited from base or tablet rules */
 
 /* Top row */
 .zapier{
@@ -2515,18 +2514,17 @@ table{
 }
 
 .github{
-    /* left middle */
-    top:50%;
-    left:8px;
+    /* upper left */
+    top:12px;
+    left:10px;
     right:auto;
     bottom:auto;
-    transform:translateY(-50%);
 }
 
 .slack{
     /* upper right */
-    top:20px;
-    right:8px;
+    top:12px;
+    right:10px;
     left:auto;
     bottom:auto;
 }
@@ -2542,7 +2540,7 @@ table{
 
 .figma{
     /* bottom center */
-    bottom:4px;
+    bottom:8px;
     left:50%;
     right:auto;
     top:auto;
@@ -2561,26 +2559,49 @@ table{
 /* ---------- FOOTER ---------- */
 
 .footer{
-    /* Much shorter footer via reduced padding */
-    padding:22px 20px;
+    /* Much shorter footer: reduced top/bottom padding */
+    padding:18px 20px;
 }
 
 .footer-container{
-    /* Stack logo above links, left-aligned instead of centered */
     flex-direction:column;
     align-items:flex-start;
-    gap:14px;
+    /* Reduced gap between logo and links */
+    gap:12px;
 }
 
+/* Swap "MADE IN FIGMA" for ICON + LOGO on mobile only,
+   without touching the HTML */
 .footer-logo h2{
-    font-size:20px;
+    display:flex;
+    align-items:center;
+    font-size:0;         /* hides original "MADE IN FIGMA" text node */
+    font-weight:700;
+    line-height:1;
+}
+
+.footer-logo h2::before{
+    content:"";
+    display:inline-block;
+    width:20px;
+    height:20px;
+    background:linear-gradient(90deg,#5564ff,#e2b8ff);
+    border-radius:5px;
+    margin-right:8px;
+}
+
+.footer-logo h2::after{
+    content:"LOGO";
+    font-size:18px;
+    font-weight:700;
+    color:#fff;
 }
 
 .footer-links{
-    /* Left aligned, wraps into 2 rows */
     flex-wrap:wrap;
     justify-content:flex-start;
     width:100%;
+    /* Reduced gap between rows and between links */
     row-gap:8px;
     column-gap:14px;
 }
@@ -2589,9 +2610,8 @@ table{
     font-size:13px;
 }
 
-/* Force the exact 4-then-3 row split without touching the HTML:
-   giving the 5th link flex-basis:100% makes it claim a full new
-   line, pushing links 5-7 onto row 2 regardless of text width */
+/* Forces a guaranteed break before Link 5, giving an exact
+   4-then-3 two-row layout regardless of link text length */
 .footer-links a:nth-child(5){
     flex-basis:100%;
 }
