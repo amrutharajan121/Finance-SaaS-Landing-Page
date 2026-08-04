@@ -951,41 +951,41 @@ table{
 @media (max-width:768px){
 
 .how-it-works{
-    padding:60px 18px;
+    padding:70px 20px;
 }
 
 .section-title{
-    margin-bottom:38px;
+    margin-bottom:40px;
 }
 
 .section-title h2{
-    font-size:22px;
+    font-size:24px;
     font-weight:700;
-    margin-bottom:10px;
+    letter-spacing:0;
 }
 
 .section-title p{
-    font-size:13px;
+    font-size:14px;
     line-height:22px;
-    max-width:220px;
-    margin:auto;
 }
 
 .steps{
     display:flex;
     flex-direction:column;
+    gap:0;
 }
 
 .step-item{
     position:relative;
-    padding-bottom:26px;
+    padding-bottom:32px;
 }
 
 .step{
+    width:100%;
     display:flex;
     align-items:flex-start;
-    gap:12px;
-    width:100%;
+    text-align:left;
+    gap:14px;
 }
 
 .step-content{
@@ -993,29 +993,23 @@ table{
 }
 
 .circle{
-    width:30px;
-    height:30px;
-    min-width:30px;
-    border:1px solid #d8dce8;
-    border-radius:50%;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    background:#fff;
-    font-size:16px;
-    font-weight:600;
-    color:#18244d;
-    position:relative;
-    z-index:2;
+    width:36px;
+    height:36px;
+    min-width:36px;
+    margin:0;
+    font-size:18px;
+    border:1px solid #d7dcea;
 }
 
 .line{
     position:absolute;
-    left:14px;          /* center of 30px circle */
-    top:38px;           /* starts just below circle */
-    width:0;
-    height:34px;        /* shorter line like Figma */
-    border-left:2px dashed #d2d5df;
+    left:17px;
+    top:36px;
+    width:2px;
+    height:50px;
+    border:none;
+    border-left:2px dashed #cfd6e5;
+    margin:0;
 }
 
 .step-item:last-child .line{
@@ -1023,17 +1017,15 @@ table{
 }
 
 .step h3{
-    font-size:14px;
+    font-size:16px;
     font-weight:600;
-    color:#18244d;
-    margin-bottom:4px;
-    line-height:20px;
+    margin-bottom:6px;
 }
 
 .step p{
-    font-size:12px;
-    line-height:18px;
-    color:#42526b;
+    font-size:13px;
+    line-height:20px;
+    color:#304579;
 }
 
 }
