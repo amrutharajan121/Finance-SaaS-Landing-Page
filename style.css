@@ -595,7 +595,7 @@ header{
 
 .hero{
     padding:18px;
-    gap:28px;
+    gap:10px;
 }
 
 .left h1{
@@ -673,21 +673,19 @@ header{
 
 /* Keep original dashboard */
 
-.dashboard{
-    display:flex;
-    width:100%;
-    min-width:720px;
-    border-radius:18px;
-    overflow:hidden;
-}
-
-.mobile-dashboard{
-    display:none;
-}
-
 .right{
+    justify-content:center;
+    align-items:flex-start;
+}
+
+.dashboard{
     width:100%;
-    overflow-x:auto;
+    min-width:unset;
+    max-width:100%;
+    transform:scale(.38);
+    transform-origin:top center;
+    margin-top:-170px;
+    margin-bottom:-180px;
 }
 
 
