@@ -824,14 +824,17 @@ table{
 
 }
 
+/* All other rules (base + 992px breakpoint) unchanged */
+
 @media (max-width:600px){
 
+    /* CONTAINER WIDTH — equal left/right margins, text starts at consistent x-position */
     .how-it-works{
         padding:70px 24px;
     }
 
     .section-title{
-        margin-bottom:55px;
+        margin-bottom:40px; /* reduced: correct spacing before first timeline item */
     }
 
     .section-title h2{
@@ -842,39 +845,55 @@ table{
     .section-title p{
         font-size:16px;
         line-height:1.5;
+        /* centered subtitle, width matches reference */
+        max-width:280px;
+        margin-left:auto;
+        margin-right:auto;
     }
 
+    /* TIMELINE ITEM — tighter horizontal gap circle→text, tighter vertical rhythm */
     .step{
         max-width:100%;
-        grid-template-columns:60px 1fr;
-        column-gap:16px;
-        padding-bottom:38px;
+        grid-template-columns:54px 1fr; /* column matches circle width exactly, so line/circle centers align */
+        column-gap:14px;               /* reduced gap between circle and text */
+        row-gap:6px;                   /* reduced gap between title and description */
+        padding-bottom:32px;           /* reduced overall vertical spacing between steps */
     }
 
     .circle{
         width:54px;
         height:54px;
         font-size:20px;
+        justify-self:start; /* column is now exactly circle-width, so no centering offset needed */
     }
 
     .step h3{
         font-size:17px;
         line-height:1.35;
+        font-weight:500;
+        margin:0; /* description sits directly below with row-gap controlling spacing */
     }
 
     .step p{
         font-size:15px;
-        line-height:1.7;
+        line-height:1.6; /* matched to reference line-height */
+        font-weight:400;
+        margin:0;
     }
 
+    /* DASHED CONNECTOR — centered under circle, starts just below circle, ends just above next circle */
     .line{
-        height:62px;
-        margin-top:8px;
-        margin-left:26px;
+        width:2px;
+        height:34px;         /* shortened so it doesn't overshoot into next circle */
+        border:none;
+        border-left:2px dashed #b8c2d8;
+        margin:6px 0 0 26px; /* 26px = (54px circle width / 2) - (2px line width / 2), centers line on circle */
+        grid-column:1;
+        grid-row:3;
+        justify-self:start;
     }
 
 }
-
 /*==================================
         TESTIMONIAL
 ===================================*/
