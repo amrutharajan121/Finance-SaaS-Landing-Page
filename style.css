@@ -681,169 +681,328 @@ table{
 }
 /* ================= HOW IT WORKS ================= */
 
-/* ============ HOW IT WORKS — DESKTOP (default, >992px) ============ */
-
 .how-it-works{
-    padding:100px 24px;
+
+    padding:100px 8%;
+    background:#fff;
+
 }
 
 .section-title{
+
     text-align:center;
-    margin-bottom:90px;
+    margin-bottom:70px;
+
 }
 
 .section-title h2{
+
     font-size:56px;
     font-weight:500;
     color:#18244d;
     margin-bottom:18px;
     letter-spacing:-1px;
+
+}
+.section-title p{
+    color:#304579
 }
 
-.section-title p{
-    color:#304579;
+.section-title{
+
+    text-align:center;
+
+    margin-bottom:90px;
+
 }
 
 .steps{
+
     display:flex;
     justify-content:center;
     align-items:flex-start;
     gap:25px;
+
 }
 
 .step{
+
     width:300px;
+
     text-align:center;
+
 }
 
+
 .circle{
+
     width:100px;
     height:88px;
+
     border:1.5px solid #d7dcea;
+
     border-radius:50%;
+
     display:flex;
     justify-content:center;
     align-items:center;
+
     margin:0 auto 35px;
+
     background:#fff;
+
     font-size:42px;
+
     font-weight:500;
+
     color:#1d2f62;
+
     transition:.3s;
+
+}
+
+
+
+
+.line{
+
+    width:200px;
+
+    border-top:2px dashed #b8c2d8;
+
+    margin-top:44px;
+    color:#132551;
+
 }
 
 .step h3{
+
     font-size:26px;
+
     color:#1d2f62;
+
     margin-bottom:14px;
+
 }
 
 .step p{
+
     font-size:18px;
+
     line-height:32px;
+
     color:#132551;
+
     font-weight:400;
+
 }
 
-/* Dashed line hidden on desktop — desktop uses side-by-side cards, no connector needed */
-
-.line{
-    display:none;
-}
-
-/* ============ TABLET & MOBILE — TIMELINE LAYOUT (≤992px) ============ */
+/* ================= RESPONSIVE ================= */
 
 @media(max-width:992px){
 
 .steps{
-    flex-direction:column;
-    align-items:flex-start;
-    gap:0;
-}
 
-.step-item{
-    display:flex;
-    flex-direction:column;
-    align-items:flex-start;
-    width:100%;
-    max-width:420px;
-    margin:0 auto;
+    display:flex !important;
+    flex-direction:column !important;
+    align-items:center !important;
+    justify-content:flex-start !important;
+    gap:0 !important;
+
 }
 
 .step{
-    display:flex;
-    align-items:flex-start;
-    gap:20px;
-    width:100%;
-    text-align:left;
+
+    width:100% !important;
+    max-width:350px !important;
+    text-align:center !important;
+
 }
 
 .circle{
-    width:56px;
-    height:56px;
-    font-size:22px;
-    margin:0;
-    flex-shrink:0;
+
+    margin:0 auto 24px !important;
+
+}
+
+.line{
+
+    display:block !important;
+    width:2px !important;
+    height:40px !important;
+    border:none !important;
+    border-left:2px dashed #b8c2d8 !important;
+    background:none !important;
+    margin:24px auto;
+    margin-bottom:70px;
+
+}
+
+.section-title h2{
+
+    font-size:56px;
+    font-weight:500;
+    color:#18244d;
+    margin-bottom:18px;
+    letter-spacing:-1px;
+
+}
+.section-title p{
+    color:#304579
+}
+
+.section-title{
+
+    text-align:center;
+
+    margin-bottom:90px;
+
+}
+
+.steps{
+
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    gap:25px;
+
+}
+
+.step{
+
+    width:300px;
+
+    text-align:center;
+
+}
+
+
+.circle{
+
+    width:100px;
+    height:88px;
+
+    border:1.5px solid #d7dcea;
+
+    border-radius:50%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    margin:0 auto 35px;
+
+    background:#fff;
+
+    font-size:42px;
+
+    font-weight:500;
+
+    color:#1d2f62;
+
+    transition:.3s;
+
+}
+
+
+
+
+.line{
+
+    width:200px;
+
+    border-top:2px dashed #b8c2d8;
+
+    margin-top:44px;
+    color:#132551;
+
 }
 
 .step h3{
-    font-size:20px;
-    margin-bottom:8px;
-    text-align:left;
+
+    font-size:26px;
+
+    color:#1d2f62;
+
+    margin-bottom:14px;
+
 }
 
 .step p{
-    font-size:15px;
-    line-height:24px;
-    text-align:left;
+
+    font-size:18px;
+
+    line-height:32px;
+
+    color:#132551;
+
+    font-weight:400;
+
 }
 
-/* Dashed line — width matches circle diameter so it sits centered
-   underneath, height matches the gap needed to reach the next circle */
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:992px){
+
+.steps{
+
+    display:flex !important;
+    flex-direction:column !important;
+    align-items:center !important;
+    justify-content:flex-start !important;
+    gap:0 !important;
+
+}
+
+.step{
+
+    width:100% !important;
+    max-width:350px !important;
+    position:relative !important;
+
+}
 
 .line{
-    display:block;
-    width:2px;
-    height:40px;
-    border:none;
-    border-left:2px dashed #b8c2d8;
-    background:none;
-    margin:8px 0 8px 27px;
-}
+
+    display:block !important;
+    width:2px !important;
+    height:50px !important;
+    border:none !important;
+    border-left:2px dashed #b8c2d8 !important;
+    background:none !important;
+    margin:0 auto !important;
+    align-self:center !important;
 
 }
 
-/* ============ MOBILE FINE-TUNING (≤600px) ============ */
+}
 
 @media(max-width:600px){
 
 .section-title h2{
-    font-size:28px;
-}
 
-.section-title p{
-    font-size:14px;
-    line-height:20px;
+    font-size:32px;
+
 }
 
 .circle{
-    width:44px;
-    height:44px;
-    font-size:17px;
+
+    width:60px;
+    height:60px;
+    font-size:28px;
+
 }
 
 .step h3{
-    font-size:17px;
-}
 
-.step p{
-    font-size:14px;
-    line-height:21px;
+    font-size:18px;
+
 }
 
 .line{
-    height:30px;
-    margin-left:21px;
+
+    height:36px !important;
+
 }
 
 }
