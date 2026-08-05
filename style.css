@@ -805,9 +805,10 @@ table{
 
     display:flex !important;
     flex-direction:column !important;
-    align-items:center !important;
+    align-items:flex-start !important;
     justify-content:flex-start !important;
     gap:0 !important;
+    padding-left:10px;
 
 }
 
@@ -815,54 +816,6 @@ table{
 
     width:100% !important;
     max-width:350px !important;
-    position:relative !important;
-
-}
-
-.line{
-
-    display:block !important;
-    width:2px !important;
-    height:50px !important;
-    border:none !important;
-    border-left:2px dashed #b8c2d8 !important;
-    background:none !important;
-    margin:0 auto !important;
-    align-self:center !important;
-
-}
-
-}
-
-@media(max-width:600px){
-
-.section-title h2{
-
-    font-size:32px;
-
-}
-
-.circle{
-
-    width:60px;
-    height:60px;
-    font-size:28px;
-
-}
-
-.step h3{
-
-    font-size:18px;
-
-}
-
-.line{
-
-    height:36px !important;
-
-}
-
-}
 
 /*==================================
         TESTIMONIAL
