@@ -785,7 +785,7 @@ table{
         grid-template-columns:60px 1fr;
         grid-template-rows:auto auto auto;
         column-gap:18px;
-        row-gap:6px;
+        row-gap:10px;
         text-align:left;
         position:relative;
         margin:0 auto;
@@ -823,18 +823,18 @@ table{
         text-align:left;
     }
 
-    /* Dashed connector: pinned to circle's horizontal center,
-       fixed short segment, sits under the circle only */
+    /* Dashed connector — centered on the SAME grid column as the circle,
+       no manual left offset, so it always sits on the circle's true axis */
     .line{
         width:2px;
-        height:40px;
+        height:38px;
         border:none;
         border-left:2px dashed #b8c2d8;
-        margin:8px 0 0 0;
+        margin:0;
         grid-column:1;
         grid-row:3;
         justify-self:center;
-        align-self:start;
+        align-self:end;
     }
 
     .step:last-child .line{
@@ -867,7 +867,7 @@ table{
         max-width:100%;
         grid-template-columns:54px 1fr;
         column-gap:14px;
-        padding-bottom:30px;
+        padding-bottom:32px;
     }
 
     .circle{
@@ -886,13 +886,14 @@ table{
         line-height:1.6;
     }
 
+    /* No margin-left here — this is what was causing the drift.
+       justify-self:center on the parent .line rule keeps it locked
+       to the circle's axis at every breakpoint. */
     .line{
-        height:34px;
-        margin-top:6px;
+        height:32px;
     }
 
 }
-
 /*==================================
         TESTIMONIAL
 ===================================*/
