@@ -2460,3 +2460,229 @@ display:none;
 }
 
 }
+
+
+/* ================= FOOTER ================= */
+
+.site-footer{
+    width:100%;
+    background:#111111;
+    min-height:90px;
+    display:flex;
+    align-items:center;
+}
+
+.footer-container{
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    font-family:'Inter', sans-serif;
+}
+
+.footer-logo{
+    font-family:'Inter', sans-serif;
+    font-size:17px;
+    font-weight:700;
+    color:#ffffff;
+    letter-spacing:0.5px;
+    white-space:nowrap;
+}
+
+.footer-links{
+    display:flex;
+    align-items:center;
+    gap:20px;
+    flex-wrap:nowrap;
+}
+
+.footer-link{
+    font-family:'Inter', sans-serif;
+    font-size:14px;
+    font-weight:500;
+    color:#ffffff;
+    text-decoration:none;
+    transition:opacity .25s ease;
+    white-space:nowrap;
+}
+
+.footer-link:hover{
+    opacity:0.8;
+}
+
+.desktop-logo{
+    display:block;
+    font-family:'Inter', sans-serif;
+    font-size:17px;
+    font-weight:700;
+    color:#ffffff;
+    letter-spacing:0.5px;
+    white-space:nowrap;
+    margin:0;
+}
+
+.mobile-logo{
+    display:none;
+}
+
+/* ================= FOOTER RESPONSIVE ================= */
+
+@media (max-width:768px){
+
+    .footer-container{
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+        gap:20px;
+        padding:24px 8%;
+        text-align:center;
+    }
+
+    .site-footer{
+        min-height:auto;
+    }
+
+    .footer-links{
+        justify-content:center;
+        flex-wrap:wrap;
+        row-gap:12px;
+    }
+
+}
+
+/* =========================================================
+   MOBILE FIX — CTA + FLOATING ICONS + FOOTER
+   Placed last in the file so it wins the cascade at ≤768px
+   over the existing @media(1000px)/@media(700px) rules above.
+   Desktop/laptop styles are untouched.
+========================================================= */
+
+@media (max-width:768px){
+
+    /* ---------- CTA SECTION ---------- */
+
+    .cta-section{
+        padding:90px 25px 110px; /* more vertical room for icons */
+        min-height:700px;
+    }
+
+    .cta-content h2{
+        font-size:48px;
+        font-weight:700;
+        line-height:1.15;
+        text-align:center;
+        width:90%;
+        margin:0 auto 24px;
+    }
+
+    .cta-content p{
+        font-size:18px;
+        line-height:1.7;
+        max-width:320px;
+        text-align:center;
+        margin:0 auto 36px;
+    }
+
+    .cta-content a{
+        width:220px;
+        height:58px;
+        border-radius:999px;
+        font-size:16px;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        margin:0 auto;
+        padding:0; /* height controls sizing instead of padding */
+    }
+
+    /* ---------- FLOATING ICONS — repositioned, not hidden ---------- */
+
+    .floating{
+        display:flex; /* overrides the display:none from the 700/1000 blocks */
+        width:52px;
+        height:52px;
+    }
+
+    .floating img{
+        width:26px;
+    }
+
+    .zapier{
+        top:20px;
+        left:50%;
+        bottom:auto;
+        right:auto;
+        transform:translateX(-50%);
+    }
+
+    .github{
+        left:25px;
+        top:90px;
+        bottom:auto;
+        right:auto;
+    }
+
+    .slack{
+        left:70px;
+        top:210px;
+        bottom:auto;
+        right:auto;
+    }
+
+    .figma{
+        left:50%;
+        bottom:110px;
+        top:auto;
+        right:auto;
+        transform:translateX(-50%);
+    }
+
+    .jira{
+        left:25px;
+        bottom:70px;
+        top:auto;
+        right:auto;
+    }
+
+    .notion{
+        right:25px;
+        bottom:70px;
+        top:auto;
+        left:auto;
+    }
+
+    /* ---------- FOOTER ---------- */
+
+    .footer-container{
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+        gap:30px;
+        padding:35px 8%;
+        text-align:center;
+    }
+
+    .site-footer{
+        min-height:auto;
+    }
+
+    .desktop-logo{
+        display:none;
+    }
+
+    .mobile-logo{
+        display:block;
+        width:120px;
+        margin:0 auto;
+    }
+
+    .footer-links{
+        display:grid;
+        grid-template-columns:repeat(4,auto);
+        justify-content:center;
+        gap:18px 24px;
+        flex-wrap:unset; /* grid replaces the flex-wrap approach */
+    }
+
+}
