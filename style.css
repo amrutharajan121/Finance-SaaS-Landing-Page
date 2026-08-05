@@ -755,22 +755,6 @@ table{
 
 @media (max-width:992px){
 
-    .section-title{
-        margin-bottom:55px;
-    }
-
-    .section-title h2{
-        font-size:32px;
-        font-weight:500;
-        margin-bottom:14px;
-        letter-spacing:-0.5px;
-    }
-
-    .section-title p{
-        font-size:16px;
-        line-height:1.5;
-    }
-
     .steps{
         display:flex;
         flex-direction:column;
@@ -789,7 +773,7 @@ table{
         text-align:left;
         position:relative;
         margin:0 auto;
-        padding-bottom:36px;
+        padding-bottom:45px;
     }
 
     .circle{
@@ -801,7 +785,6 @@ table{
         grid-row:1;
         justify-self:center;
         align-self:start;
-        flex-shrink:0;
     }
 
     .step h3{
@@ -809,9 +792,8 @@ table{
         grid-row:1;
         margin:0;
         font-size:18px;
-        line-height:1.3;
+        line-height:1.35;
         text-align:left;
-        align-self:start;
     }
 
     .step p{
@@ -823,18 +805,17 @@ table{
         text-align:left;
     }
 
-    /* Dashed connector — centered on the SAME grid column as the circle,
-       no manual left offset, so it always sits on the circle's true axis */
+    /* Dashed connector */
+
     .line{
         width:2px;
-        height:38px;
+        height:58px;
         border:none;
         border-left:2px dashed #b8c2d8;
-        margin:0;
+        margin:10px 0 0 26px;
         grid-column:1;
         grid-row:3;
         justify-self:center;
-        align-self:end;
     }
 
     .step:last-child .line{
@@ -850,50 +831,50 @@ table{
     }
 
     .section-title{
-        margin-bottom:45px;
+        margin-bottom:55px;
     }
 
     .section-title h2{
-        font-size:28px;
-        margin-bottom:12px;
+        font-size:32px;
+        margin-bottom:14px;
     }
 
     .section-title p{
-        font-size:15px;
+        font-size:16px;
         line-height:1.5;
     }
 
     .step{
         max-width:100%;
-        grid-template-columns:54px 1fr;
-        column-gap:14px;
-        padding-bottom:32px;
+        grid-template-columns:60px 1fr;
+        column-gap:16px;
+        padding-bottom:38px;
     }
 
     .circle{
-        width:48px;
-        height:48px;
-        font-size:18px;
+        width:54px;
+        height:54px;
+        font-size:20px;
     }
 
     .step h3{
-        font-size:16px;
-        line-height:1.3;
+        font-size:17px;
+        line-height:1.35;
     }
 
     .step p{
-        font-size:14px;
-        line-height:1.6;
+        font-size:15px;
+        line-height:1.7;
     }
 
-    /* No margin-left here — this is what was causing the drift.
-       justify-self:center on the parent .line rule keeps it locked
-       to the circle's axis at every breakpoint. */
     .line{
-        height:32px;
+        height:62px;
+        margin-top:8px;
+        margin-left:26px;
     }
 
 }
+
 /*==================================
         TESTIMONIAL
 ===================================*/
