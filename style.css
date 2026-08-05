@@ -2687,15 +2687,10 @@ display:none;
         white-space:nowrap;
     }
 
-    /* =========================================================
-   MOBILE-ONLY REFINEMENTS (≤480px)
-   Overrides the 768px block's footer rules for phone widths.
-   Tablet (481–768px) keeps using the 768px block as-is.
-========================================================= */
-
-@media (max-width:480px){
+    @media (max-width:480px){
 
     .footer-container{
+        align-items:center;
         padding:16px 20px 16px;
     }
 
