@@ -828,69 +828,84 @@ table{
 
 @media (max-width:600px){
 
-    /* CONTAINER WIDTH — equal left/right margins, text starts at consistent x-position */
     .how-it-works{
-        padding:70px 24px;
+        padding:56px 20px 48px;
     }
 
     .section-title{
-        margin-bottom:40px; /* reduced: correct spacing before first timeline item */
+        margin-bottom:34px;
     }
 
     .section-title h2{
-        font-size:32px;
+        font-size:30px;
+        line-height:1.2;
         margin-bottom:14px;
+        font-weight:600;
     }
 
     .section-title p{
+        max-width:300px;
+        margin:0 auto;
         font-size:16px;
-        line-height:1.5;
-        /* centered subtitle, width matches reference */
-        max-width:280px;
-        margin-left:auto;
-        margin-right:auto;
+        line-height:1.55;
     }
 
-    /* TIMELINE ITEM — tighter horizontal gap circle→text, tighter vertical rhythm */
     .step{
-        max-width:100%;
-        grid-template-columns:54px 1fr; /* column matches circle width exactly, so line/circle centers align */
-        column-gap:14px;               /* reduced gap between circle and text */
-        row-gap:6px;                   /* reduced gap between title and description */
-        padding-bottom:32px;           /* reduced overall vertical spacing between steps */
+        width:100%;
+        max-width:340px;
+        margin:0 auto;
+        display:grid;
+        grid-template-columns:56px 1fr;
+        grid-template-rows:auto auto auto;
+        column-gap:18px;
+        row-gap:8px;
+        padding-bottom:18px;
+        align-items:start;
     }
 
     .circle{
         width:54px;
         height:54px;
         font-size:20px;
-        justify-self:start; /* column is now exactly circle-width, so no centering offset needed */
+        margin:0;
+        grid-column:1;
+        grid-row:1;
+        justify-self:center;
     }
 
     .step h3{
-        font-size:17px;
+        grid-column:2;
+        grid-row:1;
+        margin:2px 0 0;
+        font-size:18px;
         line-height:1.35;
-        font-weight:500;
-        margin:0; /* description sits directly below with row-gap controlling spacing */
+        font-weight:600;
     }
 
     .step p{
-        font-size:15px;
-        line-height:1.6; /* matched to reference line-height */
-        font-weight:400;
+        grid-column:2;
+        grid-row:2;
         margin:0;
+        font-size:15px;
+        line-height:1.6;
+        max-width:230px;
     }
 
-    /* DASHED CONNECTOR — centered under circle, starts just below circle, ends just above next circle */
     .line{
-        width:2px;
-        height:34px;         /* shortened so it doesn't overshoot into next circle */
-        border:none;
-        border-left:2px dashed #b8c2d8;
-        margin:6px 0 0 26px; /* 26px = (54px circle width / 2) - (2px line width / 2), centers line on circle */
         grid-column:1;
         grid-row:3;
-        justify-self:start;
+        justify-self:center;
+
+        width:0;
+        height:44px;
+
+        border-left:2px dashed #bcc6d8;
+
+        margin-top:6px;
+    }
+
+    .step:last-child .line{
+        display:none;
     }
 
 }
