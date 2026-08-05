@@ -2628,21 +2628,21 @@ display:none;
         transform:translateX(-50%);
     }
     .slack{
-        top:85px; right:20px; left:auto; bottom:auto;
+        top:100px; right:20px; left:auto; bottom:auto;
         transform:none;
     }
 
     /* bottom row — Jira left, Figma center, Notion right, equal distance from bottom */
     .jira{
-        bottom:79px; left:20px; top:auto; right:auto;
+        bottom:28px; left:20px; top:auto; right:auto;
         transform:none;
     }
     .figma{
-        bottom:28px; left:50%; top:auto; right:auto;
+        bottom:90px; left:50%; top:auto; right:auto;
         transform:translateX(-50%);
     }
     .notion{
-        bottom:79px; right:20px; top:auto; left:auto;
+        bottom:28px; right:20px; top:auto; left:auto;
         transform:none;
     }
 
