@@ -2528,66 +2528,66 @@ display:none;
 
 /* ================= FOOTER RESPONSIVE ================= */
 
-@media (max-width:768px){
+/* ---------- FOOTER ---------- */
 
-    .site-footer{
-        background:#000000;
-        min-height:auto;
-    }
+.site-footer{
+    background:#000;
+    min-height:auto;
+}
 
-    .footer-container{
-        flex-direction:column;
-        justify-content:center;
-        align-items:center;
-        gap:0;
-        padding:32px 20px 28px;
-        text-align:center;
-    }
+.footer-container{
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    padding:32px 20px 28px;
+    text-align:center;
+}
 
-    .footer-brand{
-        display:flex;
-        align-items:center;
-        justify-content:center;
-        gap:10px;
-        margin-bottom:28px;
-    }
+.footer-brand{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    margin-bottom:28px;
+}
 
-    .desktop-logo{
-        display:none;
-    }
+/* Hide desktop logo */
+.desktop-logo{
+    display:none;
+}
 
-    .mobile-logo{
-        display:block;
-        width:38px;
-        height:38px;
-        object-fit:contain;
-        margin:0;
-        font-size:0;
-        color:transparent;
-    }
+/* Show mobile logo */
+.mobile-logo{
+    display:block;
+    width:38px;
+    height:38px;
+    object-fit:contain;
+    margin:0;
+}
 
-    .mobile-logo-text{
-        display:block;
-        font-family:'Inter', sans-serif;
-        font-size:30px;
-        font-weight:700;
-        color:#ffffff;
-        letter-spacing:0.5px;
-        line-height:1;
-    }
+/* Show LOGO text */
+.mobile-logo-text{
+    display:block;
+    font-family:"Inter",sans-serif;
+    font-size:18px;
+    font-weight:700;
+    color:#fff;
+    line-height:1;
+}
 
-    .footer-links{
-        display:grid;
-        grid-template-columns:repeat(4,auto);
-        justify-content:center;
-        gap:16px 26px;
-    }
+/* Links exactly like design */
+.footer-links{
+    display:grid;
+    grid-template-columns:repeat(4,auto);
+    justify-content:center;
+    gap:16px 28px;
+}
 
-    .footer-link{
-        font-size:13px;
-        white-space:nowrap;
-    }
-
+.footer-link{
+    font-size:13px;
+    color:#fff;
+    text-decoration:none;
+    white-space:nowrap;
 }
 
 
@@ -2709,31 +2709,15 @@ display:none;
         display:none;
     }
 
-    .mobile-logo{
-        display:block;
-        width:80px;
-        height:auto;
-        margin:0 auto;
-        font-size:0;
-        color:transparent;
-    }
-
-    .footer-links{
-        display:flex;
-        flex-wrap:wrap;
-        justify-content:center;
-        align-items:center;
-        gap:16px 26px;
-    }
+    
+    
 
     .footer-link{
         font-size:13px;
         flex:0 0 auto;
     }
 
-    .mobile-logo-text{
-    display:none;
-}
+
 
 
 
