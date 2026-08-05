@@ -805,16 +805,7 @@ table{
 
     flex-direction:column;
     align-items:center;
-
-}
-
-.line{
-
-    width:2px;
-    height:70px;
-    border:none;
-    border-left:2px dashed #ccc;
-    margin:0;
+    gap:0;
 
 }
 
@@ -822,6 +813,20 @@ table{
 
     width:100%;
     max-width:350px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+}
+
+.line{
+
+    width:2px;
+    height:60px;
+    border:none;
+    border-left:2px dashed #ccc;
+    margin:0 auto;
+    align-self:center;
 
 }
 
@@ -846,6 +851,12 @@ table{
 .step h3{
 
     font-size:18px;
+
+}
+
+.line{
+
+    height:44px;
 
 }
 
