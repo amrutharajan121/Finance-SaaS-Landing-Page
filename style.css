@@ -2571,18 +2571,24 @@ display:none;
     /* ---------- CTA SECTION ---------- */
 
     .cta-section{
-        padding:100px 20px 150px;
-        min-height:760px;
-        display:flex;
-        flex-direction:column;
-        align-items:center;
-        justify-content:center;
-    }
+    padding:70px 20px 120px;
+    min-height:720px;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    justify-content:flex-start;   /* Instead of center */
+
+    position:relative;
+}
 
     .cta-content{
-        max-width:calc(100% - 150px); /* reserves a fixed 75px gutter each side for icons */
-        margin:0 auto;
-    }
+    margin-top:80px;
+    text-align:center;
+    position:relative;
+    z-index:5;
+}
 
     .cta-content h2{
         font-size:30px;
@@ -2623,32 +2629,43 @@ display:none;
         width:26px;
     }
 
-    /* top row */
-    .zapier{
-        top:24px; left:50%; bottom:auto; right:auto;
-        transform:translateX(-50%);
-    }
-    .github{
-        top:24px; left:14px; bottom:auto; right:auto;
-    }
+    /* ---------- Top ---------- */
 
-    /* vertical middle, left edge */
-    .slack{
-        top:50%; left:14px; bottom:auto; right:auto;
-        transform:translateY(-50%);
-    }
+.zapier{
+    top:20px;
+    left:50%;
+    transform:translateX(-50%);
+}
 
-    /* bottom row */
-    .figma{
-        bottom:24px; left:50%; top:auto; right:auto;
-        transform:translateX(-50%);
-    }
-    .jira{
-        bottom:24px; left:14px; top:auto; right:auto;
-    }
-    .notion{
-        bottom:24px; right:14px; top:auto; left:auto;
-    }
+.github{
+    top:85px;
+    left:25px;
+}
+
+.slack{
+    top:120px;
+    right:25px;
+    left:auto;
+}
+
+/* ---------- Bottom ---------- */
+
+.figma{
+    bottom:90px;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+.jira{
+    bottom:35px;
+    left:25px;
+}
+
+.notion{
+    bottom:35px;
+    right:25px;
+    left:auto;
+}
 
     /* ---------- FOOTER ---------- */
 
