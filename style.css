@@ -753,65 +753,124 @@ table{
 
 /* ================= RESPONSIVE ================= */
 
-@media(max-width:992px){
+@media (max-width:992px){
 
     .steps{
-        display:flex !important;
-        flex-direction:column !important;
-        align-items:center !important;
-        justify-content:flex-start !important;
-        gap:0 !important;
+        display:flex;
+        flex-direction:column;
+        align-items:flex-start;
+        gap:0;
     }
 
     .step{
-        width:100% !important;
-        max-width:350px !important;
-        text-align:center !important;
-        position:relative !important;
-        display:flex !important;
-        flex-direction:column !important;
-        align-items:center !important;
+        width:100%;
+        max-width:420px;
+        display:grid;
+        grid-template-columns:60px 1fr;
+        grid-template-rows:auto auto auto;
+        column-gap:18px;
+        row-gap:10px;
+        text-align:left;
+        position:relative;
+        margin:0 auto;
+        padding-bottom:45px;
     }
 
     .circle{
-        margin:0 0 24px 0 !important;
+        width:54px;
+        height:54px;
+        font-size:20px;
+        margin:0;
+        grid-column:1;
+        grid-row:1;
+        justify-self:center;
+        align-self:start;
     }
 
-    /* Connector line: same center axis as the circle via flex align-items,
-       not page-centered margin auto. Fixed length, equal spacing top/bottom. */
+    .step h3{
+        grid-column:2;
+        grid-row:1;
+        margin:0;
+        font-size:18px;
+        line-height:1.35;
+        text-align:left;
+    }
+
+    .step p{
+        grid-column:2;
+        grid-row:2;
+        margin:0;
+        font-size:16px;
+        line-height:1.6;
+        text-align:left;
+    }
+
+    /* Dashed connector */
+
     .line{
-        display:block !important;
-        width:2px !important;
-        height:40px !important;
-        border:none !important;
-        border-left:2px dashed #b8c2d8 !important;
-        background:none !important;
-        margin:0 0 24px 0 !important;
-        align-self:center !important;
+        width:2px;
+        height:58px;
+        border:none;
+        border-left:2px dashed #b8c2d8;
+        margin:10px 0 0 26px;
+        grid-column:1;
+        grid-row:3;
+        justify-self:center;
+    }
+
+    .step:last-child .line{
+        display:none;
     }
 
 }
 
-@media(max-width:600px){
+@media (max-width:600px){
+
+    .how-it-works{
+        padding:70px 24px;
+    }
+
+    .section-title{
+        margin-bottom:55px;
+    }
 
     .section-title h2{
         font-size:32px;
+        margin-bottom:14px;
+    }
+
+    .section-title p{
+        font-size:16px;
+        line-height:1.5;
+    }
+
+    .step{
+        max-width:100%;
+        grid-template-columns:60px 1fr;
+        column-gap:16px;
+        padding-bottom:38px;
     }
 
     .circle{
-        width:60px;
-        height:60px;
-        font-size:28px;
-        margin:0 0 20px 0 !important;
+        width:54px;
+        height:54px;
+        font-size:20px;
     }
 
     .step h3{
-        font-size:18px;
+        font-size:17px;
+        line-height:1.35;
+    }
+
+    .step p{
+        font-size:15px;
+        line-height:1.7;
     }
 
     .line{
-        height:36px !important;
-        margin:0 0 20px 0 !important;
+        height:62px;
+        margin-top:8px;
+        margin-left:26px;
     }
 
 }
