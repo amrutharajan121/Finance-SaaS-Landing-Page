@@ -891,116 +891,89 @@ table{
 
 @media(max-width:600px){
 
-.how-it-works{
-    padding:52px 20px;
-}
+    .how-it-works{
+        padding:52px 20px;
+    }
 
-.section-title{
-    margin-bottom:28px;
-}
+    .section-title{
+        margin-bottom:28px;
+    }
 
-.section-title h2{
-    font-size:26px;
-    font-weight:600;
-    margin-bottom:12px;
-    letter-spacing:0;
-}
+    .section-title h2{
+        font-size:30px;
+        font-weight:600;
+        margin-bottom:12px;
+        letter-spacing:0;
+    }
 
-.section-title p{
-    max-width:290px;
-    margin:auto;
-    font-size:15px;
-    line-height:1.55;
-}
+    .section-title p{
+        max-width:285px;
+        margin:auto;
+        font-size:16px;
+        line-height:1.55;
+    }
 
-/* Timeline */
+    /* Timeline */
 
-.steps{
+    .steps{
+        max-width:325px;
+        grid-template-columns:46px 1fr;
+        column-gap:16px;
+        row-gap:0;
+        align-items:start;
+    }
 
-    max-width:325px;
+    /* Number Circle */
 
-    grid-template-columns:46px 1fr;
+    .circle{
+        width:46px;
+        height:46px;
+        font-size:18px;
+        border:1px solid #d7dcea;
+        margin:0;
+        justify-self:center;
+        align-self:start;
+    }
 
-    column-gap:16px;
+    /* Step Heading */
 
-    row-gap:0;
+    .step h3{
+        grid-column:2;
+        margin:0 0 4px;
+        font-size:16px;
+        line-height:1.35;
+        text-align:left;
+        font-weight:600;
+    }
 
-}
+    /* Description */
 
-/* Number */
+    .step p{
+        grid-column:2;
+        margin:0 0 12px;
+        max-width:220px;
+        font-size:15px;
+        line-height:1.55;
+        text-align:left;
+    }
 
-.circle{
+    /* Vertical Dashed Line */
 
-    width:46px;
-    height:46px;
+    .line{
+        grid-column:1;
+        justify-self:center;
+        width:0;
+        height:54px;
+        margin:0;
+        border:none;
+        border-left:1.5px dashed #b8c2d8;
+    }
 
-    font-size:18px;
+    /* Hide last connector */
 
-    border-width:1px;
-
-    align-self:start;
-
-    margin-top:2px;
-
-}
-
-/* Heading */
-
-.step h3{
-
-    font-size:16px;
-
-    line-height:1.35;
-
-    margin:2px 0 8px;
-
-    text-align:left;
-
-}
-
-/* Description */
-
-.step p{
-
-    grid-column:2;
-
-    margin:0 0 22px;
-
-    max-width:235px;
-
-    font-size:15px;
-
-    line-height:1.55;
-
-    text-align:left;
-
-}
-
-/* Connector */
-
-.line{
-
-    grid-column:1;
-
-    justify-self:center;
-
-    width:0;
-
-    height:34px;
-
-    margin:2px 0 8px;
-
-    border:none;
-
-    border-left:1.5px dashed #b8c2d8;
-
-}
-
-.steps>.line:last-of-type{
-
-    display:none;
-
-}
+    .steps > .line:last-of-type{
+        display:none;
+    }
 
 }
 /*==================================
