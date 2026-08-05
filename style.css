@@ -2526,78 +2526,15 @@ display:none;
     display:none;
 }
 
-/* ================= FOOTER RESPONSIVE ================= */
-
-/* ---------- FOOTER ---------- */
-
-.site-footer{
-    background:#000;
-    min-height:auto;
-}
-
-.footer-container{
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    padding:32px 20px 28px;
-    text-align:center;
-}
-
-.footer-brand{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:8px;
-    margin-bottom:28px;
-}
-
-/* Hide desktop logo */
-.desktop-logo{
+.mobile-logo-text{
     display:none;
 }
 
-/* Show mobile logo */
-.mobile-logo{
-    display:block;
-    width:38px;
-    height:38px;
-    object-fit:contain;
-    margin:0;
-}
-
-/* Show LOGO text */
-.mobile-logo-text{
-    display:block;
-    font-family:"Inter",sans-serif;
-    font-size:18px;
-    font-weight:700;
-    color:#fff;
-    line-height:1;
-}
-
-/* Links exactly like design */
-.footer-links{
-    display:grid;
-    grid-template-columns:repeat(4,auto);
-    justify-content:center;
-    gap:16px 28px;
-}
-
-.footer-link{
-    font-size:13px;
-    color:#fff;
-    text-decoration:none;
-    white-space:nowrap;
-}
-
-
-
 /* =========================================================
-   MOBILE FIX — single consolidated block
-   Replace ALL THREE existing @media(max-width:768px) blocks
-   in your file with this one. Keep it as the LAST rule block
-   in the stylesheet so it wins the cascade.
-   Desktop CSS and the 700px/1000px breakpoints are untouched.
+   MOBILE FIX — ONE consolidated block only.
+   This must be the ONLY @media(max-width:768px) block
+   touching .cta-section / .floating / .site-footer in the
+   whole file. Delete any other copies you find elsewhere.
 ========================================================= */
 
 @media (max-width:768px){
@@ -2605,7 +2542,7 @@ display:none;
     /* ---------- CTA SECTION ---------- */
 
     .cta-section{
-        padding:150px 20px 170px; /* extra top padding pushes heading down 50-70px; extra bottom clears icons */
+        padding:150px 20px 170px;
         min-height:820px;
         display:flex;
         flex-direction:column;
@@ -2657,7 +2594,6 @@ display:none;
         width:26px;
     }
 
-    /* top row — GitHub left, Zapier center, Slack right, all same height */
     .github{
         top:85px; left:20px; bottom:auto; right:auto;
         transform:none;
@@ -2670,8 +2606,6 @@ display:none;
         top:150px; right:20px; left:auto; bottom:auto;
         transform:none;
     }
-
-    /* bottom row — Jira left, Figma center, Notion right, equal distance from bottom */
     .jira{
         bottom:28px; left:20px; top:auto; right:auto;
         transform:none;
@@ -2697,28 +2631,52 @@ display:none;
         justify-content:center;
         align-items:center;
         gap:0;
-        padding:35px 20px;
+        padding:32px 20px 28px;
         text-align:center;
     }
 
     .footer-brand{
-        margin-bottom:25px;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        gap:10px;
+        margin-bottom:28px;
     }
 
     .desktop-logo{
         display:none;
     }
 
-    
-    
+    .mobile-logo{
+        display:block;
+        width:38px;
+        height:38px;
+        object-fit:contain;
+        margin:0;
+        font-size:0;
+        color:transparent;
+    }
+
+    .mobile-logo-text{
+        display:block;
+        font-family:'Inter', sans-serif;
+        font-size:30px;
+        font-weight:700;
+        color:#ffffff;
+        letter-spacing:0.5px;
+        line-height:1;
+    }
+
+    .footer-links{
+        display:grid;
+        grid-template-columns:repeat(4,auto);
+        justify-content:center;
+        gap:16px 26px;
+    }
 
     .footer-link{
         font-size:13px;
-        flex:0 0 auto;
+        white-space:nowrap;
     }
-
-
-
-
 
 }
