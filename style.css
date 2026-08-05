@@ -2551,12 +2551,7 @@ display:none;
 
 }
 
-/* =========================================================
-   MOBILE FIX — CTA + FLOATING ICONS + FOOTER
-   Placed last in the file so it wins the cascade at ≤768px
-   over the existing @media(1000px)/@media(700px) rules above.
-   Desktop/laptop styles are untouched.
-========================================================= */
+
 
 /* =========================================================
    MOBILE FIX — single consolidated block
@@ -2571,37 +2566,31 @@ display:none;
     /* ---------- CTA SECTION ---------- */
 
     .cta-section{
-    padding:70px 20px 120px;
-    min-height:720px;
-
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-
-    justify-content:flex-start;   /* Instead of center */
-
-    position:relative;
-}
+        padding:150px 20px 170px; /* extra top padding pushes heading down 50-70px; extra bottom clears icons */
+        min-height:820px;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
 
     .cta-content{
-    margin-top:80px;
-    text-align:center;
-    position:relative;
-    z-index:5;
-}
+        max-width:calc(100% - 140px);
+        margin:0 auto;
+    }
 
     .cta-content h2{
         font-size:30px;
         line-height:1.3;
         font-weight:700;
-        margin:0 0 25px;
+        margin:0 0 24px;
     }
 
     .cta-content p{
         font-size:15px;
         line-height:1.6;
         opacity:.9;
-        margin:0 0 35px;
+        margin:0 0 36px;
     }
 
     .cta-content a{
@@ -2616,7 +2605,7 @@ display:none;
         margin:0 auto;
     }
 
-    /* ---------- FLOATING ICONS — repositioned, never hidden ---------- */
+    /* ---------- FLOATING ICONS ---------- */
 
     .floating{
         display:flex;
@@ -2629,32 +2618,34 @@ display:none;
         width:26px;
     }
 
-    /* ---------- Top ---------- */
-
-.zapier{
-        top:30px; left:50%; bottom:auto; right:auto;
-        transform:translateX(-50%);
-    }
+    /* top row — GitHub left, Zapier center, Slack right, all same height */
     .github{
-        top:24px; left:14px; bottom:auto; right:auto;
+        top:24px; left:20px; bottom:auto; right:auto;
+        transform:none;
     }
-
-    /* vertical middle, left edge */
-    .slack{
-        top:24px; right:14px; bottom:auto; right:auto;
-    }
-
-    /* bottom row */
-    .figma{
-        bottom:30px; left:50%; top:auto; right:auto;
+    .zapier{
+        top:24px; left:50%; bottom:auto; right:auto;
         transform:translateX(-50%);
     }
+    .slack{
+        top:24px; right:20px; left:auto; bottom:auto;
+        transform:none;
+    }
+
+    /* bottom row — Jira left, Figma center, Notion right, equal distance from bottom */
     .jira{
-        bottom:24px; left:14px; top:auto; right:auto;
+        bottom:28px; left:20px; top:auto; right:auto;
+        transform:none;
+    }
+    .figma{
+        bottom:28px; left:50%; top:auto; right:auto;
+        transform:translateX(-50%);
     }
     .notion{
-        bottom:24px; right:14px; top:auto; left:auto;
+        bottom:28px; right:20px; top:auto; left:auto;
+        transform:none;
     }
+
     /* ---------- FOOTER ---------- */
 
     .site-footer{
@@ -2666,9 +2657,13 @@ display:none;
         flex-direction:column;
         justify-content:center;
         align-items:center;
-        gap:22px;
+        gap:0;
         padding:35px 20px;
         text-align:center;
+    }
+
+    .footer-brand{
+        margin-bottom:25px;
     }
 
     .desktop-logo{
@@ -2677,24 +2672,24 @@ display:none;
 
     .mobile-logo{
         display:block;
-        width:110px;
+        width:80px;
         height:auto;
         margin:0 auto;
-        font-size:0;      /* hides the fallback alt text if the image fails */
+        font-size:0;
         color:transparent;
     }
 
     .footer-links{
-        display:grid;
-        grid-template-columns:repeat(4,auto);
-        gap:18px 28px;
+        display:flex;
+        flex-wrap:wrap;
         justify-content:center;
-        flex-wrap:unset;
-        row-gap:unset;
+        align-items:center;
+        gap:16px 26px;
     }
 
     .footer-link{
         font-size:13px;
+        flex:0 0 auto;
     }
 
 }
