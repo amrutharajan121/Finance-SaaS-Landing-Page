@@ -930,10 +930,6 @@ table{
 
 }
 
-
-
-
-
 /* Text */
 .testimonial-container{
     background-color: #f5f6f5fb;
@@ -1043,18 +1039,6 @@ table{
 
 }
 
-.testimonial-content h2{
-
-    font-size:34px;
-
-}
-
-.testimonial-content p{
-
-    font-size:17px;
-
-}
-
 .play-btn{
 
     width:60px;
@@ -1063,6 +1047,9 @@ table{
     font-size:22px;
 
 }
+
+}
+
 /*==========================
    TESTIMONIAL — MOBILE FIX
    (768px and below)
@@ -1073,7 +1060,7 @@ table{
 .testimonial{
 
     background:#f7f7f8;
-    padding:70px 6%;
+    padding:50px 6%;
 
 }
 
@@ -1081,14 +1068,18 @@ table{
 
     flex-direction:column;
     align-items:flex-start !important;
+    justify-content:flex-start;
     text-align:left !important;
+    background:transparent;
+    padding:0;
+    gap:0;
 
 }
 
 .testimonial-image{
 
     width:100%;
-    margin-bottom:20px;
+    margin-bottom:16px;
 
 }
 
@@ -1103,7 +1094,8 @@ table{
 
 .testimonial-content{
 
-    width:100%;
+    width:100% !important;
+    max-width:100% !important;
     text-align:left !important;
 
 }
@@ -1112,7 +1104,9 @@ table{
 
     display:block;
     text-align:left !important;
-    margin:0 0 8px 0;
+    font-size:60px;
+    line-height:1;
+    margin:0 0 4px 0;
 
 }
 
@@ -1120,19 +1114,26 @@ table{
 
     text-align:left !important;
     width:100%;
-    font-size:28px;
+    max-width:100%;
+    font-size:26px;
     font-weight:800;
-    line-height:1.2;
-    margin:0 0 14px 0;
+    line-height:1.25;
+    word-spacing:normal;
+    letter-spacing:normal;
+    margin:0 0 16px 0;
 
 }
 
 .testimonial-content p{
 
     text-align:left !important;
-    width:100%;
+    width:100% !important;
+    max-width:100%;
+    font-size:16px;
     line-height:1.6;
-    margin-bottom:20px;
+    word-spacing:normal;
+    letter-spacing:normal;
+    margin-bottom:16px;
 
 }
 
@@ -1143,8 +1144,41 @@ table{
 }
 
 }
+
+@media(max-width:480px){
+
+.testimonial{
+
+    padding:40px 5%;
+
 }
 
+.testimonial-image img{
+
+    height:300px !important;
+
+}
+
+.quote{
+
+    font-size:50px;
+
+}
+
+.testimonial-content h2{
+
+    font-size:22px;
+
+}
+
+.testimonial-content p{
+
+    font-size:15px;
+    line-height:1.55;
+
+}
+
+}
 /*==========================
       FEATURES SECTION
 ===========================*/
