@@ -885,78 +885,120 @@ table{
       MOBILE 375px
 ==========================*/
 
+/*=========================
+      MOBILE 375px
+==========================*/
+
 @media(max-width:600px){
 
 .how-it-works{
-    padding:56px 20px;
+    padding:52px 20px;
 }
 
 .section-title{
-    margin-bottom:34px;
+    margin-bottom:28px;
 }
 
 .section-title h2{
-    font-size:30px;
-    margin-bottom:14px;
-    letter-spacing:0;
+    font-size:26px;
     font-weight:600;
+    margin-bottom:12px;
+    letter-spacing:0;
 }
 
 .section-title p{
-
-    max-width:285px;
-
+    max-width:290px;
     margin:auto;
-
-    font-size:16px;
-
+    font-size:15px;
     line-height:1.55;
-
 }
+
+/* Timeline */
 
 .steps{
 
-    max-width:330px;
+    max-width:325px;
 
-    grid-template-columns:54px 1fr;
+    grid-template-columns:46px 1fr;
 
-    column-gap:14px;
+    column-gap:16px;
+
+    row-gap:0;
 
 }
+
+/* Number */
 
 .circle{
 
-    width:54px;
-    height:54px;
-    font-size:20px;
+    width:46px;
+    height:46px;
+
+    font-size:18px;
+
+    border-width:1px;
+
+    align-self:start;
+
+    margin-top:2px;
 
 }
+
+/* Heading */
 
 .step h3{
 
-    font-size:17px;
+    font-size:16px;
 
     line-height:1.35;
 
+    margin:2px 0 8px;
+
+    text-align:left;
+
 }
+
+/* Description */
 
 .step p{
 
-    margin-top:32px;
+    grid-column:2;
 
-    max-width:220px;
+    margin:0 0 22px;
+
+    max-width:235px;
 
     font-size:15px;
 
-    line-height:1.6;
+    line-height:1.55;
+
+    text-align:left;
 
 }
 
+/* Connector */
+
 .line{
 
-    height:40px;
+    grid-column:1;
 
-    margin:4px 0 8px;
+    justify-self:center;
+
+    width:0;
+
+    height:34px;
+
+    margin:2px 0 8px;
+
+    border:none;
+
+    border-left:1.5px dashed #b8c2d8;
+
+}
+
+.steps>.line:last-of-type{
+
+    display:none;
 
 }
 
