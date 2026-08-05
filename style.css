@@ -2686,4 +2686,53 @@ display:none;
         font-size:13px;
         white-space:nowrap;
     }
+
+    /* =========================================================
+   MOBILE-ONLY REFINEMENTS (≤480px)
+   Overrides the 768px block's footer rules for phone widths.
+   Tablet (481–768px) keeps using the 768px block as-is.
+========================================================= */
+
+@media (max-width:480px){
+
+    .footer-container{
+        padding:16px 20px 16px;
+    }
+
+    .footer-brand{
+        gap:6px;
+        margin-bottom:14px;
+    }
+
+    .mobile-logo{
+        width:35px;
+        height:35px;
+    }
+
+    .mobile-logo-text{
+        font-size:21px;
+    }
+
+    .footer-links{
+        display:grid;
+        grid-template-columns:repeat(4,max-content);
+        column-gap:22px;
+        row-gap:10px;
+        justify-content:center;
+    }
+
+    .footer-links a:nth-child(5){
+        grid-column:1;
+        grid-row:2;
+    }
+    .footer-links a:nth-child(6){
+        grid-column:2;
+        grid-row:2;
+    }
+    .footer-links a:nth-child(7){
+        grid-column:3;
+        grid-row:2;
+    }
+
+}
 }
