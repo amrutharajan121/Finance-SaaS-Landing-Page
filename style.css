@@ -2620,7 +2620,7 @@ display:none;
 
     /* top row — GitHub left, Zapier center, Slack right, all same height */
     .github{
-        top:35px; left:20px; bottom:auto; right:auto;
+        top:55px; left:20px; bottom:auto; right:auto;
         transform:none;
     }
     .zapier{
@@ -2628,13 +2628,13 @@ display:none;
         transform:translateX(-50%);
     }
     .slack{
-        top:35px; right:20px; left:auto; bottom:auto;
+        top:55px; right:20px; left:auto; bottom:auto;
         transform:none;
     }
 
     /* bottom row — Jira left, Figma center, Notion right, equal distance from bottom */
     .jira{
-        bottom:39px; left:20px; top:auto; right:auto;
+        bottom:49px; left:20px; top:auto; right:auto;
         transform:none;
     }
     .figma{
@@ -2642,7 +2642,7 @@ display:none;
         transform:translateX(-50%);
     }
     .notion{
-        bottom:39px; right:20px; top:auto; left:auto;
+        bottom:49px; right:20px; top:auto; left:auto;
         transform:none;
     }
 
