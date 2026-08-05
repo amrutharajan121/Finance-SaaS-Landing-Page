@@ -2530,6 +2530,7 @@ display:none;
     display:none;
 }
 
+
 /* =========================================================
    MOBILE FIX — ONE consolidated block only.
    This must be the ONLY @media(max-width:768px) block
@@ -2628,19 +2629,19 @@ display:none;
 
     .footer-container{
         flex-direction:column;
-        justify-content:center;
-        align-items:center;
+        justify-content:flex-start;
+        align-items:flex-start;
         gap:0;
-        padding:32px 20px 28px;
-        text-align:center;
+        padding:24px 20px 22px;
+        text-align:left;
     }
 
     .footer-brand{
         display:flex;
         align-items:center;
-        justify-content:center;
-        gap:10px;
-        margin-bottom:28px;
+        justify-content:flex-start;
+        gap:8px;
+        margin-bottom:18px;
     }
 
     .desktop-logo{
@@ -2649,18 +2650,14 @@ display:none;
 
     .mobile-logo{
         display:block;
-        width:38px;
-        height:38px;
+        width:28px;
+        height:28px;
         object-fit:contain;
-        margin:0;
-        font-size:0;
-        color:transparent;
     }
 
     .mobile-logo-text{
         display:block;
-        font-family:'Inter', sans-serif;
-        font-size:30px;
+        font-size:17px;
         font-weight:700;
         color:#ffffff;
         letter-spacing:0.5px;
@@ -2669,14 +2666,23 @@ display:none;
 
     .footer-links{
         display:grid;
-        grid-template-columns:repeat(4,auto);
-        justify-content:center;
-        gap:16px 26px;
+        grid-template-columns:repeat(4,max-content);
+        column-gap:20px;
+        row-gap:10px;
+        justify-content:start;
     }
+
+    .footer-links a:nth-child(5),
+    .footer-links a:nth-child(6),
+    .footer-links a:nth-child(7){
+        grid-row:2;
+    }
+
+    .footer-links a:nth-child(5){grid-column:1;}
+    .footer-links a:nth-child(6){grid-column:2;}
+    .footer-links a:nth-child(7){grid-column:3;}
 
     .footer-link{
         font-size:13px;
         white-space:nowrap;
     }
-
-}
